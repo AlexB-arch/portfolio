@@ -1,0 +1,85 @@
+(* Highest number in a list:  *)
+	fun high [x] = x
+	| high(x::y::z) = if x>y then high(x::z) else high(y::z)
+	| high[] = 0;
+
+(* Removes de 2nd item from a list: *)
+	fun rem nil = nil
+	| rem [h] = [h]
+	| rem (h::m::t) = h::t;
+
+(* Zips two lists: *)
+	fun zip ([a],[b]) = [(a,b)]
+	| zip (h1::t1,h2::t2) = (h1,h2)::zip(t1,t2);
+
+(* Unzip two lists: *)
+	fun unzip [(a,b)] = ([a],[b])
+	| unzip ((h1,h2)::t) = 
+	let val (t1,t2) = unzip(t) in 
+		(h1::t1,h2::t2)
+	end;
+
+(* Flip a pair of adjacent values: *)
+	fun flip nil = nil
+	| flip (h::nil) = h::nil
+	| flip (h::m::t) = m::h::flip t;
+
+
+
+
+(* Checks if a list is a prefix of another list: *)
+	fun prefix (nil,nil) = true
+	| prefix (h::t,nil) = false
+	| prefix (nil,h::t) = true
+	| prefix (h1::t1, h2::t2) = h1=h2 andalso prefix(t1,t2);
+
+
+(* Sums a list as n0 – n1 + n2 - n3 … *)
+	fun alter aList = foldl op+ 0 aList;
+
+(* Merge two int lists and sort in ascending order: *)
+	fun merge (nil,t2) = t2
+	| merge (t1, nil) = t1
+	| merge (h1::t1,h2::t2) =
+		if h1<h2 then 
+			h1::merge(t1,h2::t2)
+		else 
+			h2::merge(h1::t1,t2);
+
+(* Create sub-lists from a given int list: *)
+	fun listify nil = nil
+	| listify [h] = [[h]]
+	| listify (h::m::t) =  
+		let val mid::tail = listify(m::t) in
+		if h <= m then 
+			(h::mid)::tail
+		else 
+			[h]::listify(m::t)
+		end;
+
+(* Merge and Sort two lists: *)
+	fun mlergesort nil = nil
+	| mlergesort [x] = [x]
+	| mlergesort [x,y] = 
+		if x <= y
+		then [x,y]
+		else [y,x]
+	| mlergesort aList = 
+		let val (X,Y) = listify aList in 
+		merge (mlergesort X, mlergesort Y)
+		end;
+
+
+(* Checks a list for the first instance of the given condition: *)
+	fun first F nil = NONE
+	| first F (h::t) = 
+			if F h then SOME h 
+			else 
+			first F t;
+
+(* Checks a list for the last instance of the given condition: *)
+      fun last L nil = NONE
+      | last L (h::t) = 
+		if L h then SOME h
+		else 
+		last L t;

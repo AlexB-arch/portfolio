@@ -1,0 +1,13 @@
+.vscode
+*.vs
+*.sln
+bin
+obj
+*.csproj
+.DS_Store
+*Assets*
+Midterm
+*.plist
+*storyboard
+AppDelegate*
+*Resources
