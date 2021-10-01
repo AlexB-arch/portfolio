@@ -17,4 +17,6 @@ ReceiptMachine
 Taxes
 Web325
 *.exe
-*ViewController*
+*ViewController
+node_modules
+package*

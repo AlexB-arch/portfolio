@@ -8,9 +8,9 @@ abstract class Shape
     //Base Class methods and properties.
     public abstract string getColor();
     public abstract void setColor(string color);
+    public abstract void move(params double[] moves);
     public abstract double area();
     public abstract double perimeter();
-    public abstract void move(params double[] moves);
     public abstract string render();
 }
 
@@ -160,6 +160,13 @@ class Circle : Shape
         this.radius = radius;
     }
 
+    public override void move(params double[] moves)
+    {
+        X = moves[0];
+        Y = moves[1];
+        radius = moves[2];
+    }
+
     //Inherited methods.
     public override string getColor()
     {
@@ -180,13 +187,6 @@ class Circle : Shape
     public override double perimeter()
     {
         return 0;
-    }
-
-    public override void move(params double[] moves)
-    {
-        X = moves[0];
-        Y = moves[1];
-        radius = moves[2];
     }
 
     public override string render()
@@ -286,6 +286,11 @@ class Triangle : Shape
         this.color = color;
     }
 
+    public override void move(params double[] moves)
+    {
+        //Left empty on purpose.
+    }
+
     public override double area()
     {
         return 0;
@@ -294,11 +299,6 @@ class Triangle : Shape
     public override double perimeter()
     {
         return 0;
-    }
-
-    public override void move(params double[] moves)
-    {
-        //Left empty on purpose.
     }
 
     public override string render()
@@ -379,7 +379,7 @@ class Polygon : Shape
 
     public override void move(params double[] moves)
     {
-        //Left empty on purpose.
+        //Blank for testing.
     }
 
     public override string render()
