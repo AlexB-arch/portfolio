@@ -86,4 +86,6 @@ list of question types
 are there survey types?
 has a user started, but not finished the survey?
 
+Only authors and admins need to log in, not the users
+
 */
