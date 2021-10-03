@@ -76,10 +76,14 @@ class Box : Shape
     //Sets new coordinates for the box shape.
     public override void move(params double[] moves)
     {
-        left = moves[0];
-        top = moves[1];
-        right = moves[2];
-        bottom = moves[3];
+        foreach(double move in moves)
+        {
+            setLeft(move);
+            setTop(move);
+            setRight(move);
+            setBottom(move);
+        }
+       
     }
 
     //Calculates the surface area of a box.
@@ -162,9 +166,11 @@ class Circle : Shape
 
     public override void move(params double[] moves)
     {
-        X = moves[0];
-        Y = moves[1];
-        radius = moves[2];
+        foreach (double move in moves) {
+            setCenterX(move);
+            setCenterY(move);
+            setRadius(move);
+        }
     }
 
     //Inherited methods.
@@ -288,7 +294,15 @@ class Triangle : Shape
 
     public override void move(params double[] moves)
     {
-        //Left empty on purpose.
+        foreach(double move in moves)
+        {
+            setCornerX1(X1 + move);
+            setCornerY1(Y1 + move);
+            setCornerX2(X2 + move);
+            setCornerY2(Y2 + move);
+            setCornerX3(X3 + move);
+            setCornerY3(Y3 + move);
+        }
     }
 
     public override double area()
@@ -336,9 +350,9 @@ class Polygon : Shape
         return numPoints;
     }
 
-    public double getVertexX(int index)
+    public double getVertexX()
     {
-        return X[index];
+        return 0;
     }
 
     public double getVertexY(int index)
@@ -374,12 +388,14 @@ class Polygon : Shape
 
     public override double perimeter()
     {
+        
+        //A= 1/2 The sum of (x[i]y[i]+1)-(x[i]+1y[i])
         return 0;
     }
 
     public override void move(params double[] moves)
     {
-        //Blank for testing.
+        //Blank       
     }
 
     public override string render()
