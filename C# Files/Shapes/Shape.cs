@@ -332,9 +332,6 @@ class Triangle : Shape
         setColor(color);
         setCornerX1(X1);
         setCornerX2(X2);
-        setCornerX3(X3);
-        setCornerY1(Y1);
-        setCornerY2(Y2);
         setCornerY3(Y3);
     }
 }
