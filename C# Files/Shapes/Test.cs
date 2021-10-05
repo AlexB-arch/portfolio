@@ -2,7 +2,7 @@
 
 class TestShape
 {
-    public static void Main()
+    public static void Main(string[] args)
     {
         int count = 0;
         double[] pts = { 1, 1, 7, 2, 3, 5, 6, 8, 4, 3 };

@@ -76,14 +76,10 @@ class Box : Shape
     //Sets new coordinates for the box shape.
     public override void move(params double[] moves)
     {
-        foreach(double move in moves)
-        {
-            setLeft(move);
-            setTop(move);
-            setRight(move);
-            setBottom(move);
-        }
-       
+            left += moves[0];
+            top += moves[0];
+            right += moves[1];
+            bottom += moves[1];
     }
 
     //Calculates the surface area of a box.
@@ -103,7 +99,7 @@ class Box : Shape
         double width = right - left;
         double height = top - bottom;
 
-        return (2 * width) + (2 * height);
+        return 2 * (height + width);
     }
 
     //Returns the shape's information.
@@ -164,15 +160,6 @@ class Circle : Shape
         this.radius = radius;
     }
 
-    public override void move(params double[] moves)
-    {
-        foreach (double move in moves) {
-            setCenterX(move);
-            setCenterY(move);
-            setRadius(move);
-        }
-    }
-
     //Inherited methods.
     public override string getColor()
     {
@@ -184,15 +171,21 @@ class Circle : Shape
         this.color = color;
     }
 
+    public override void move(params double[] moves)
+    {
+            X += moves[0];
+            Y += moves[1];
+    }
+
     //Calculates area of a circle as A = pi * radius^2
     public override double area()
     {
-        return Math.PI * (radius * radius);
+        return Math.PI * Math.Pow(radius, 2);
     }
 
     public override double perimeter()
     {
-        return 0;
+        return 2 * Math.PI * radius;
     }
 
     public override string render()
@@ -294,25 +287,33 @@ class Triangle : Shape
 
     public override void move(params double[] moves)
     {
-        foreach(double move in moves)
-        {
-            setCornerX1(X1 + move);
-            setCornerY1(Y1 + move);
-            setCornerX2(X2 + move);
-            setCornerY2(Y2 + move);
-            setCornerX3(X3 + move);
-            setCornerY3(Y3 + move);
-        }
+            X1 += moves[0];
+            Y1 += moves[1];
+            X2 += moves[0];
+            Y2 += moves[1];
+            X3 += moves[0];
+            Y3 += moves[1];
     }
 
     public override double area()
     {
-        return 0;
+        double Area;
+
+        Area = Math.Abs((X1 - X3) * (Y2 - Y1) - (X1 - X2) * (Y3 - Y1))/2;
+
+        return Area;
     }
 
     public override double perimeter()
     {
-        return 0;
+        double AB, BC, CA;
+
+        AB = Math.Sqrt(Math.Pow(X1 - X2, 2) + Math.Pow(Y1 - Y3, 2));
+        BC = Math.Sqrt(Math.Pow(X2 - X3, 2) + Math.Pow(Y2 - Y3, 2));
+        CA = Math.Sqrt(Math.Pow(X3 - X1, 2) + Math.Pow(Y2 - Y1, 2));
+
+
+        return AB + BC + CA;
     }
 
     public override string render()
@@ -350,24 +351,29 @@ class Polygon : Shape
         return numPoints;
     }
 
-    public double getVertexX()
+    public void setNumPoints(int value)
     {
-        return 0;
+        numPoints = value;
     }
 
-    public double getVertexY(int index)
+    public double getVertexX(int i)
     {
-        return Y[index];
+        return X[i];
     }
 
-    public void setVertexX(int index, double x)
+    public double getVertexY(int i)
     {
-        X[index] = x;
+        return Y[i];
     }
 
-    public void setVertexY(int index, double y)
+    public void setVertexX(int index, double points)
     {
-        Y[index] = y;
+        X[index] = points;
+    }
+
+    public void setVertexY(int index, double points)
+    {
+        Y[index] = points;
     }
 
     //Inherited Methods.
@@ -383,24 +389,58 @@ class Polygon : Shape
 
     public override double area()
     {
-        return 0;
+        //A= 1/2 The sum of (x[i]y[i]+1)-(x[i]+1y[i])
+        double A = 0;
+
+        for (int i = 0; i < numPoints - 1; i++)
+        {
+            A += X[i] * Y[i + 1] - (Y[i] * X[i + 1]);
+        }
+
+        A += X[X.Length - 1] * Y[0] - (Y[Y.Length - 1] * X[0]);
+
+        return Math.Abs(A/2);
     }
 
     public override double perimeter()
     {
-        
-        //A= 1/2 The sum of (x[i]y[i]+1)-(x[i]+1y[i])
-        return 0;
+        double P = 0;
+
+        for (int i = 0; i < numPoints - 1; i++)
+        {
+            P += Math.Sqrt(Math.Pow(X[i + 1] - X[i], 2) + Math.Pow(Y[i + 1] - Y[i], 2));
+        }
+
+        P += Math.Sqrt(Math.Pow(X[X.Length - 1] - Y[0], 2) + Math.Pow(Y[Y.Length - 1] - X[0], 2));
+
+        return P;
     }
 
     public override void move(params double[] moves)
     {
-        //Blank       
+        for(int i = 0; i < X.Length; i++)
+        {
+            X[i] += moves[0];   
+        }
+
+        for (int j = 0; j < Y.Length; j++)
+        {
+            Y[j] += moves[1];
+        }
     }
 
     public override string render()
     {
-        return "";
+        string output = "Polygon(" + color + "," + numPoints;
+
+        for(int i = 0; i < numPoints; i++)
+        {
+           output += "," + getVertexX(i) + "," + getVertexY(i);
+        }
+
+        output += ")";
+
+        return output;
     }
 
     //Constructors
@@ -412,8 +452,14 @@ class Polygon : Shape
     public Polygon(string color, double[] points, int numPoints)
     {
         setColor(color);
-        this.numPoints = numPoints;
+        setNumPoints(numPoints);
         X = new double[numPoints];
         Y = new double[numPoints];
+
+        for (int i = 0; i < numPoints; i++)
+        {
+            setVertexX(i, points[2 * i]);
+            setVertexY(i, points[2 * i + 1]);
+        }
     }
 }
