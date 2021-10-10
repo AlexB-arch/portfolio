@@ -86,7 +86,7 @@ class Box : Shape
     public override double area()
     {
         //Reduces the points to width and height only.
-        double width = right - left;
+        double width = left - right;
         double height = top - bottom;
 
         return height * width;
@@ -96,7 +96,7 @@ class Box : Shape
     public override double perimeter()
     {
         //Reduces the points to width and height only.
-        double width = right - left;
+        double width = left - right;
         double height = top - bottom;
 
         return 2 * (height + width);
@@ -308,12 +308,12 @@ class Triangle : Shape
     {
         double AB, BC, CA;
 
-        AB = Math.Sqrt(Math.Pow(X1 - X2, 2) + Math.Pow(Y1 - Y3, 2));
-        BC = Math.Sqrt(Math.Pow(X2 - X3, 2) + Math.Pow(Y2 - Y3, 2));
-        CA = Math.Sqrt(Math.Pow(X3 - X1, 2) + Math.Pow(Y2 - Y1, 2));
+        AB = (Math.Pow(X3 - X2, 2) + Math.Pow(Y1 - Y3, 2));
+        BC = (Math.Pow(X2 - X1, 2) + Math.Pow(Y3 - Y2, 2));
+        CA = (Math.Pow(X1 - X3, 2) + Math.Pow(Y2 - Y1, 2));
 
 
-        return AB + BC + CA;
+        return (AB + BC + CA)/2;
     }
 
     public override string render()
