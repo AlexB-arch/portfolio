@@ -313,7 +313,7 @@ class Triangle : Shape
         CA = (Math.Pow(X1 - X3, 2) + Math.Pow(Y2 - Y1, 2));
 
 
-        return (AB + BC + CA)/2;
+        return (AB + BC + CA);
     }
 
     public override string render()
