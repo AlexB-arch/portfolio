@@ -13,10 +13,13 @@ class Fraction
     }
 
     //Constructor that accepts numerator and denominator.
-    public Fraction(int num, int den)
+    public Fraction(int numerator, int denominator)
     {
-        numerator = num;
-        denominator = den;
+        if (denominator == 0)
+            Console.WriteLine("");
+
+        this.numerator = numerator;
+        this.denominator = denominator;
     }
 
 
@@ -38,16 +41,22 @@ class Fraction
     }
 
     public void Reduce()
-    { 
-        whole += numerator / denominator;
-
-        if (numerator % denominator != 0)
+    {
+        if (denominator != 0)
         {
-            numerator = numerator % denominator;
+            whole += numerator / denominator;
+
+            if (numerator % denominator != 0)
+            {
+                numerator = numerator % denominator;
+            }
         }
 
-        else
-            numerator = numerator / denominator;
+        /*if(numerator > 0 && denominator == 0)
+        {
+            whole += numerator;
+        }*/
+
     }
 
     // Add the two given Fractions, return the result as a new Fraction.
@@ -89,6 +98,8 @@ class Fraction
 
         if (a.whole > 0 || b.whole > 0)
         {
+            c.whole = a.whole * b.whole;
+
             //Check and convert mixed fractions
             if(a.whole > 0 && b.whole == 0)
             {
@@ -116,10 +127,10 @@ class Fraction
             c.Reduce();
         }
 
-        else
+        if (a.denominator == b.denominator)
         {
             //Step 1:
-            c.numerator = a.numerator - b.numerator;
+            c.numerator = (a.numerator - b.numerator)/ b.denominator;
 
             //Step 2:
             c.Reduce();
@@ -226,7 +237,7 @@ class Fraction
 
         else if (whole > 0 && numerator != denominator)
         {
-           return whole.ToString() + " " + numerator.ToString() + "/" + denominator.ToString();
+            return whole.ToString() + " " + numerator.ToString() + "/" + denominator.ToString();
         }
 
         else if(whole > 0 && numerator == 0)
@@ -234,7 +245,7 @@ class Fraction
             return whole.ToString();
         }
 
-        else if(whole == 0 && numerator > denominator)
+        else if (whole == 0 && numerator > denominator && denominator != 0)
         {
             return (numerator / denominator).ToString();
         }

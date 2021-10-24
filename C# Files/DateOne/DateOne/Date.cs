@@ -100,4 +100,88 @@ class Date
          */
         
     }
+
+    public static bool operator == (Date a, Date b)
+    {
+        if ((a.Year == b.Year) && (a.Month== b.Month) && (a.Day == b.Day))
+            return true;
+
+        return false;
+    }
+
+    public static bool operator !=(Date a, Date b)
+    {
+        if (a.Year != b.Year && a.Month != b.Month && a.Day != b.Day)
+            return true;
+
+        return false;
+    }
+
+    public static bool operator < (Date a, Date b)
+    {
+        if (a.Year < b.Year)
+            return true;
+
+        else if (a.Year == b.Year && a.Month < b.Month)
+            return true;
+
+        else if (a.Year == b.Year && a.Month == b.Month && a.Day < b.Day && (a.Day > 31 || a.Day < 1))
+            return true;
+
+        return false;
+    }
+
+    public static bool operator > (Date a, Date b)
+    {
+        if (a.Year > b.Year)
+            return true;
+
+        else if (a.Year == b.Year && a.Month > b.Month)
+            return true;
+
+        else if (a.Year == b.Year && a.Month == b.Month && a.Day > b.Day && (a.Day > 31 || a.Day < 1))
+            return true;
+
+        return false;
+    }
+
+    public static bool operator >= (Date a, Date b)
+    {
+        if (a.Year >= b.Year && a.Month >= b.Month && a.Day >= b.Day)
+            return true;
+
+        else if (a.Month >= b.Month)
+            return a.Month >= b.Month;
+
+        else if (a.Day >= b.Day)
+            return a.Day >= b.Day;
+
+        else
+            return false;
+    }
+
+    public static bool operator <= (Date a, Date b)
+    {
+        if (a.Year <= b.Year)
+            return a.Year <= b.Year;
+
+        else if (a.Month <= b.Month)
+            return a.Month <= b.Month;
+
+        else if (a.Day <= b.Day)
+            return a.Day <= b.Day;
+
+        else
+            return false;
+    }
+
+    public override bool Equals(Object obj)
+    {
+        return false;
+    }
+
+    public override int GetHashCode()
+    {
+        return 0;
+    }
 }
