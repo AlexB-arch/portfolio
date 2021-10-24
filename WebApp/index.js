@@ -33,8 +33,6 @@ app.use('/admin', adminRouter);
 app.use('/about', aboutRouter);
 app.use('/auth', authRouter);
 
-app.use(express.static(path.join(__dirname, './public/')));//This line serves your actual html page. Only for static content.
-
 /* APP.SET ALLOWS YOU TO SET VARIABLES FOR THE APP */
 app.set('views', './src/views');//sets the path for your views.
 app.set('view engine', 'ejs');//sets your template engine that renders html.
