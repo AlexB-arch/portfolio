@@ -1,6 +1,6 @@
-const menutoggle = document.getElementById('mobile-menu-toggle');
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
 
-menutoggle.addEventListener('click', function () {
+mobileMenuToggle.addEventListener('click', function () {
     let menu = document.getElementById('mobile-menu');
 
     if(menu.classList.contains('hidden')){
