@@ -5,7 +5,7 @@ class MainClass
     static void Main()
     {
 
-        int w, n, d;
+        /*int w, n, d;
 
         Console.Write("Enter whole number for X: ");
         w = int.Parse(Console.ReadLine());
@@ -39,7 +39,13 @@ class MainClass
         Console.WriteLine("MUL: {0}", M.Display());
 
         Fraction D = X / Y;
-        Console.WriteLine("DIV: {0}", D.Display());
+        Console.WriteLine("DIV: {0}", D.Display());*/
+
+        Fraction x = new Fraction(3, 2, 3);
+        Fraction y = new Fraction(0, 3, 1);
+        Fraction z = x - y;
+
+        Console.WriteLine(z.Display());
 
     }
 }
