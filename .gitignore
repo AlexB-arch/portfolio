@@ -15,9 +15,5 @@ webdev-325
 *.exe
 *ViewController
 node_modules
-package*
 tailwind*
-*config*
-MX
 webdev-325
-config*
