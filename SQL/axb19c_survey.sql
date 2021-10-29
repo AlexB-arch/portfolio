@@ -137,7 +137,7 @@ INSERT INTO questions (survey_id, question_id, question_type, content) VALUES
 (0004, 03, 'TF', 'Electric vehicles will be the norm by 2030'),
 (0004, 04, 'TF', 'Using AI to improve road safety is more important that self driving.'),
 (0005, 01, 'TF', 'Are you a crazy cat lady?'),
-(0005, 02, 'MC', 'Favory type of pet. 1 = Dogs 2 = Cats 3 = Fish 4 = Birds'),
+(0005, 02, 'MC', 'Favorite type of pet. 1 = Dogs 2 = Cats 3 = Fish 4 = Birds'),
 (0005, 03, 'TF', 'Do you have a yard?'),
 (0005, 04, 'TF', 'Will this be an emotional therapy animal?'),
 (0005, 05, 'TF', 'Would you like you to contact you for more information?'),
