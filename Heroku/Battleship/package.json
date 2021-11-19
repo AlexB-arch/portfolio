@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+
+  "engines": {
+    "node": "17.0.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "battleship",
+  "version": "1.0.0",
+  "description": "Web325 Final Project",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "heroku"
+  },
+  "author": "Alex Burgos",
+  "license": "ISC"
+}
