@@ -1,9 +1,28 @@
 {
+<<<<<<< HEAD
   "devDependencies": {
     "autoprefixer": "^10.3.7",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "postcss": "^8.3.9",
     "tailwindcss": "^2.2.17"
+=======
+  "name": "portfolio_site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "set DEBUG=app, app:* & nodemon index.js",
+    "debug": "set DEBUG=* & node index.js"
+  },
+  
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+>>>>>>> cbedf80 (Adds config files temporarily)
   }
 }

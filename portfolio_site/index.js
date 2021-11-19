@@ -14,6 +14,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 /* ROUTERS */
 const resumeRouter = require('./src/routers/resumeRouter');
+const resumeRouter = require('./src/routers/contactRouter');
 
 /* MIDDLEWARE */
 app.use(morgan('tiny'));//Gives you less information from the connection.

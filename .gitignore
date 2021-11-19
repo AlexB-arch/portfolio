@@ -15,9 +15,14 @@ webdev-325
 *.exe
 *ViewController
 node_modules
+<<<<<<< HEAD
+=======
+
+>>>>>>> cbedf80 (Adds config files temporarily)
 tailwind*
 <<<<<<< HEAD
 webdev-325
+<<<<<<< HEAD
 =======
 Shapes
 Fraction
@@ -25,3 +30,5 @@ DateOne
 MX
 portfolio_site
 >>>>>>> 6119e78 (Some commit)
+=======
+>>>>>>> cbedf80 (Adds config files temporarily)
