@@ -16,9 +16,13 @@ webdev-325
 *ViewController
 node_modules
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cbedf80 (Adds config files temporarily)
+=======
+package-lock*
+>>>>>>> 25a230c (Updates gitignore)
 tailwind*
 <<<<<<< HEAD
 webdev-325
