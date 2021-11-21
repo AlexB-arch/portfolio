@@ -5,10 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <script src="./canvas.js"></script>
 </head>
 <body>
-    <canvas id="grid" width="800" height="800" onload="draw()"></canvas>
+    <canvas id="grid" onload="draw()" width="1000" height="1000">
+        <img id="ww" src="./heisenberg.png" alt="">
+
+        <script>
+            onload = function draw() {
+
+            const grid = document.getElementById('grid');
+            const image = document.getElementById('ww');
+            var context = grid.getContext('2d');
+
+            var dim = 40;
+
+            //Text
+            context.font = "48px serif";
+            context.textBaseline = "hanging";
+            context.fillText("This is a grid and Heisenberg drawn on canvas", 0, 550);
+            context.strokeText("This is a grid and Heisenberg drawn on canvas", 0, 600);
+
+            context.beginPath();
+
+            // Vertical Captions
+            for (var y = 1; y <= 10; y++) {
+                context.fillStyle = '#FF0000';
+                context.font = 'bold 18px sans-serif';
+                context.testBaseLine = 'bottom';
+                context.fillText(y, 10, y * dim + 24);
+            }
+            // Horizontal Captions
+            for (var x = 1; x <= 10; x++) {
+                context.fillStyle = '#FF0000';
+                context.font = 'bold 18px sans-serif';
+                context.testBaseLine = 'bottom';
+                context.fillText(x, x * dim + 14, 20);
+            }
+
+            for (var x = 1; x <= 10; x++) {
+                for (var y = 1; y <= 10; y++) {
+                    context.rect(x * dim, y * dim, dim, dim);
+                    context.lineWidth = 2;
+                    context.strokeStyle = '#a0a0a0';
+                    context.stroke();
+                }
+            }
+
+            function highlight_cell(context, x, y, dim) {
+                context.beginPath();
+                context.rect(x * dim + 1, y * dim + 1, dim - 2, dim - 2);
+                context.fillStyle = '#84BDA6';
+                context.fill();
+            }
+
+            //Image
+            context.drawImage(image, 10, 450, 100, 100);
+            };
+        </script>
+    </canvas>
+    
 </body>
 </html>

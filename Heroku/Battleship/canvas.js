@@ -36,4 +36,4 @@ onload = function draw() {
         context.fillStyle = '#84BDA6';
         context.fill();
     }
-}
+};
