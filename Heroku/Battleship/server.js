@@ -1,23 +1,22 @@
 const express = require('express');
 const path = require('path');
+const PORT = process.env.PORT || 5000;
 
 const app = express();
-let port = process.env.PORT || 3000
-
-//Template Engine
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
-
-//Route
-const indexRouter = require('./routes/index');
+const io = socketIO(app);
 
 //Middleware
-app.use(express.json());
-app.use(express.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
-app.use('/', indexRouter);
+//Routes
+app.get('/', (request, response) => response.render('index'));
 
-app.listen(port, async () => { 
-    console.log('App listening on port', port);
-});
+//Socket
+io.on('connection', (socket) => {
+    console.log('Client connected');
+    socket.on('disconnect', () => console.log('Client disconnected'));
+  });
+
+app.listen(PORT, () => console.log(`Listening on ${PORT}`));
