@@ -1,17 +1,17 @@
 const express = require('express');
 const path = require('path');
 const PORT = process.env.PORT || 5000;
+const server = http.createServer(app)
+const { Server } = require('socket.io')
 
 const app = express();
-const io = socketIO(app);
+const io = Server(server);
 
 //Middleware
 app.use(express.static(path.join(__dirname, 'public')));
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
 
 //Routes
-app.get('/', (request, response) => response.render('index'));
+app.get('/', (request, response) => response.sendFile('/index.html'));
 
 //Socket
 io.on('connection', (socket) => {
@@ -19,4 +19,4 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => console.log('Client disconnected'));
   });
 
-app.listen(PORT, () => console.log(`Listening on ${PORT}`));
+server.listen(PORT, () => console.log(`Listening on ${PORT}`));

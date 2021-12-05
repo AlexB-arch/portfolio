@@ -1,22 +1,25 @@
+const { response } = require('express');
 const express = require('express');
 const router = express.Router();
 
 
 module.exports = params => {
-    router.get('/db', async (req, res) => {
-        console.log('This is /db route');
 
+    router.get('/', async (request, response) =>{
+        response.send('index');
+    })
+
+    router.get('/db', async (request, response) => {
         try {
-          const client = await pool.connect();
-          const result = await client.query('SELECT * FROM test_table');
-          const results = { 'results': (result) ? result.rows : null};
-          res.render('index', results);
-          client.release();
-        } catch (err) {
-          console.error(err);
-          res.send("Error " + err);
-        }
-      })
+            const client = await pool.connect();
 
-      return router;
+            client.release();
+
+        } catch (err) {
+            console.error(err);
+            response.send("Error " + err);
+        }
+    })
+
+    return router;
 }
