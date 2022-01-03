@@ -2,7 +2,8 @@ const express = require('express');
 const path = require('path');
 const PORT = process.env.PORT || 3000;
 const http = require('http');
-const { Server } = require("socket.io");
+const { Server } = require('socket.io');
+const { disconnect } = require('process');
 
 const app = express();
 //Initiate server first
@@ -15,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Routes
 app.get('/', (request, response) => {
-    response.sendFile('/index.html')
+    response.sendFile('/index.html');
 });
 
 server.listen(PORT, () => console.log(`Listening on ${PORT}`));
@@ -23,44 +24,75 @@ server.listen(PORT, () => console.log(`Listening on ${PORT}`));
 /*----------------------------------------------------
 SERVER SOCKET.IO IMPLEMENTATION
 -----------------------------------------------------*/
+const connections = [null, null];
 
-//IO is the server. Socket is the client.
 io.on('connection', (socket) => {
-    
-    //Creates a new player object on connection.
-    player = new Player();
+    // console.log('New WS Connection')
 
-    player.id = socket.id;
-
-    //Test value of player id.
-    console.log(player);
-})
-
-//Chat Example. Keep for reference.
-io.on('connection', (socket) => {
-    socket.on('chat message', msg => {
-        io.emit('chat message', msg);
-    });
-});
-
-/*----------------------------------------------------
-SERVER-SIDE OBJECTS
------------------------------------------------------*/
-
-//Player object that holds id and ship location.
-function Player(){
-
-    var player = {
-        name: null,
-        id: null,
-        ships:{
-            uBoat:[],
-            destroyer1:[],
-            destroyer2:[],
-            battleship:[],
-            aircraftCarrier:[]
+    // Find an available player number
+    let playerIndex = -1;
+    for (const i in connections) {
+        if (connections[i] === null) {
+            playerIndex = i;
+            break;
         }
     }
 
-    return player;
-}
+    // Tell the connecting client what player number they are
+    socket.emit('player-number', playerIndex);
+
+    console.log(`Player ${playerIndex} has connected`);
+
+    // Ignore player 3
+    if (playerIndex === -1) return;
+
+    connections[playerIndex] = false;
+
+    // Tell eveyone what player number just connected
+    socket.broadcast.emit('player-connection', playerIndex);
+
+    // Handle Diconnect
+    socket.on('disconnect', () => {
+        console.log(`Player ${playerIndex} disconnected`);
+        connections[playerIndex] = null;
+        //Tell everyone what player numbe just disconnected
+        socket.broadcast.emit('player-connection', playerIndex);
+    });
+
+    // On Ready
+    socket.on('player-ready', () => {
+        socket.broadcast.emit('enemy-ready', playerIndex);
+        connections[playerIndex] = true;
+    });
+
+    // Check player connections
+    socket.on('check-players', () => {
+        const players = [];
+        for (const i in connections) {
+            connections[i] === null
+                ? players.push({ connected: false, ready: false })
+                : players.push({ connected: true, ready: connections[i] });
+        }
+        socket.emit('check-players', players);
+    });
+
+    // On Fire Received
+    socket.on('attack', (id) => {
+        console.log(`Shot fired from ${playerIndex}`, id);
+
+        // Emit the move to the other player
+        socket.broadcast.emit('attack', id);
+    });
+
+    // on Fire Reply
+    socket.on('attack-reply', (square) => {
+        console.log(square);
+
+        // Forward the reply to the other player
+        socket.broadcast.emit('attack-reply', square);
+    });
+
+    socket.on('chat message', (msg) => {
+        console.log('message: ' + msg);
+    });
+});
