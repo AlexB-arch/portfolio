@@ -1,14 +1,8 @@
 const express = require('express');//the base for your web app. (npm install express)
 const chalk = require('chalk');//adds color to console messages. (npm install chalk)
-const debug = require('debug')('app');//middleware that helps with debbuging. (npm install debug)
-const morgan = require('morgan');//middleware that helps to output whats happening with your app. (npm install morgan)
-const path = require('path');
-const { request } = require('http');
-const { response } = require('express');
+const debug = require('debug')('app');//middleware that helps with debugging. (npm install debug)
+const morgan = require('morgan');//middleware that helps to output what's happening with your app. (npm install morgan)
 const db = require('./queries');
-const passport = require('passport');
-const cookieParser = require('cookie-parser');
-const session = require('express-session');
 
 const PORT = process.env.PORT || 3000;
 
@@ -24,9 +18,6 @@ const authRouter = require('./src/routers/authRouter');
 app.use(morgan('tiny'));//Gives you less information from the connection.
 app.use(express.json());//Parses json file contents
 app.use(express.urlencoded({extended:true}));//Parses encoded URLs.
-app.use(cookieParser());
-app.use(session({secret: 'survey'}));
-require('./src/config/passport.js')(app);
 
 app.use('/main', mainRouter);
 app.use('/admin', adminRouter);
@@ -50,5 +41,5 @@ app.put('/users/:id', db.updateUser);
 app.delete('/users/:id', db.deleteUser);
 
 app.listen(PORT, () =>{
-    debug(`Listening on port ${chalk.green(PORT)}`);//Sends a message when when app starts
+    debug(`Listening on port ${chalk.green(PORT)}`);//Sends a message when app starts
 });
