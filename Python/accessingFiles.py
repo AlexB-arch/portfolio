@@ -1,6 +1,6 @@
 from pathlib import Path, WindowsPath # Path is a class
+import sys
 
-myPath = Path('/Users/alexander/OneDrive - acu.edu/Code/')
+Path('/Users/alexander/OneDrive - acu.edu/Code/Python')
 
-for filename in myPath.glob('*.py'):
-    print(filename)
+print(sys.platform)
