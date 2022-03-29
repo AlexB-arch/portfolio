@@ -1,6 +1,16 @@
 from pathlib import Path, WindowsPath # Path is a class
+import os
 import sys
 
-Path('/Users/alexander/OneDrive - acu.edu/Code/Python')
+print(sys.platform) # prints the platform you are using
+print(os.getcwd()) # current working directory
+print(Path.cwd()) # current working directory
+#os.chdir(r'/') # change directory
+print(Path.home()) # home directory
 
-print(sys.platform)
+# Absolute path always starts at the root folder
+
+# Relative path is relative to the current working directory
+
+# creating a file
+#os.makedirs(Path.cwd() / 'FromPythonScript') # creates a folder called FromPythonScript in the current working directory
