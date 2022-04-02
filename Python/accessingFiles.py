@@ -13,4 +13,4 @@ print(Path.home()) # home directory
 # Relative path is relative to the current working directory
 
 # creating a file
-#os.makedirs(Path.cwd() / 'FromPythonScript') # creates a folder called FromPythonScript in the current working directory
+#os.makedirs(Path.cwd() / 'FromPythonScript/Nested') # creates a folder called FromPythonScript in the current working directory
