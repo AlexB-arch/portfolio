@@ -1,0 +1,14 @@
+mov R0, #35; Adds the value 35 to register 2
+mov R1, R0; Adds the value in register 0 to register 1
+
+str R1, [R0, #25]; Moves the values of register 0 into RAM
+
+ldr R3, [R1, #25]; Moves the values in RAM to register 3
+
+add R2, R0, R1; Adds the values for register 0 and 1 into register 2
+
+loopStart:
+    sub R2, R2, #3
+    bpl loopStart
+
+swi 6
