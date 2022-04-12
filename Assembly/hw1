@@ -1,0 +1,14 @@
+;Getting started with ARM
+
+    mov R0, #50
+    mov R1, #31
+
+;your program goes here
+unicorn:
+    sub R0, R0, R1
+    sub R1, R1, R0
+    add R2, R2, #1
+    cmp R0, #0
+    bge unicorn
+    
+swi 6 ;end your program with this

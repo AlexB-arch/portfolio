@@ -1,0 +1,38 @@
+mov R0, #0
+mov R1, #0
+mov R2, #60
+mov R3, #90
+
+startLoop:
+    str R1, [R3, R0]
+    cmp R0, R2
+    beq endProgram ; Takes you to endProgram "function"
+
+add R0, R0, #1 ; Increments the index
+
+; is x[n-1]-n negative?
+sub R4, R1, R0 ; R4 is the potential next value.
+bmi altCal
+
+; is x[n-1]-n already in my sequence?
+mov R5, #0 ; Loops through the index
+
+comparisonLoop: ; Compares if the value is already in the sequence and store it
+    ldr R6, [R3, R5]
+    beq altCalc
+
+    add R5, R5, #1
+    cmp R5, R0
+    beq storeIt
+    bl comparisonLoop
+
+altCalc:
+    add R1, R1, R0
+    bl startLoop
+
+storeIt:
+    mov R1, R4
+    bl startLoop
+    
+endProgram:
+    swi 6
