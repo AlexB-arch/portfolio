@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fe09f457-1a88-4940-80f6-ca439734ea54" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Java/maven/HelloWorld/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java/maven/HelloWorld/src/main/java/HelloWorld.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java/maven/HelloWorld/target/HelloWorld-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java/maven/HelloWorld/target/classes/HelloWorld.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java/maven/HelloWorld/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java/maven/HelloWorld/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java/maven/HelloWorld/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assembly/fristSample" beforeDir="false" afterPath="$PROJECT_DIR$/../Assembly/fristSample" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assembly/hw1" beforeDir="false" afterPath="$PROJECT_DIR$/../Assembly/hw1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Assembly/recaman" beforeDir="false" afterPath="$PROJECT_DIR$/../Assembly/recaman" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/Models/ErrorViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/Models/ErrorViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/Views/Home/Privacy.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/Views/Home/Privacy.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/Views/Shared/Error.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/Views/Shared/Error.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/Views/Shared/_Layout.cshtml.css" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/Views/Shared/_Layout.cshtml.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/Views/Shared/_ValidationScriptsPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/Views/Shared/_ValidationScriptsPartial.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/Views/_ViewImports.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/Views/_ViewImports.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/Views/_ViewStart.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/Views/_ViewStart.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/css/site.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/js/site.js" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/js/site.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery-validation/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery-validation/LICENSE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery-validation/dist/additional-methods.js" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery-validation/dist/additional-methods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery-validation/dist/additional-methods.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery-validation/dist/additional-methods.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery-validation/dist/jquery.validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery-validation/dist/jquery.validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery/dist/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery/dist/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery/dist/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery/dist/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery/dist/jquery.min.map" beforeDir="false" afterPath="$PROJECT_DIR$/../C# Files/MvcMovie/wwwroot/lib/jquery/dist/jquery.min.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Heroku/stark-plateau-45266" beforeDir="false" afterPath="$PROJECT_DIR$/../Heroku/stark-plateau-45266" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/accessingFiles.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python/accessingFiles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/simpleUserValidation.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python/simpleUserValidation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/stringsPractice.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python/stringsPractice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Python/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Python/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Training/node-express-dashboard" beforeDir="false" afterPath="$PROJECT_DIR$/../Training/node-express-dashboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/.idea/WebApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/.idea/WebApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webdev-325" beforeDir="false" afterPath="$PROJECT_DIR$/../webdev-325" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2EOeWoXukzczuLGjPNmMyy2mLB6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fe09f457-1a88-4940-80f6-ca439734ea54" name="Changes" comment="" />
+      <created>1662471094618</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1662471094618</updated>
+    </task>
+    <servers />
+  </component>
+</project>
