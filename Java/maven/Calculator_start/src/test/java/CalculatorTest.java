@@ -1,6 +1,8 @@
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import org.junit.*;
+
+import org.junit.Before;
+import org.junit.Test;
 
 /**
  * Unit test for simple Calculator.
@@ -40,10 +42,10 @@ public class CalculatorTest
 	    //	    assertEquals(a - b, expect );
 	    
 	    assertTrue( true ); // fix this
-	    
-	} catch (Exception e) {
+		} 
+		catch (Exception e) {
 	    System.out.println("testSubtract catch");
-	}
+		}
     }
 
 }
