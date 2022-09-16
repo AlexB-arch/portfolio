@@ -32,4 +32,10 @@ public class Calculator
     {
         return x/y;
     }
+
+    // Squared
+    public int squared (int x)
+    {
+        return x*x;
+    }
 }

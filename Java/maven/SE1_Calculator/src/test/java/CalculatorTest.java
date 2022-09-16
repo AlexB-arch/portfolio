@@ -23,10 +23,10 @@ public class CalculatorTest
     try {
 		int a = 2;
 		int b = 3;
-		int expect = calc.add(a, b);
-		assertEquals(expect, 5);
+		int actual = calc.add(a, b);
+		assertEquals(5, actual);
 	} catch (Exception e) {
-	    System.out.println("testAdd catch");
+	    System.out.println("testAdd1 catch");
 		}
     }
 
@@ -35,10 +35,10 @@ public class CalculatorTest
 		try {
 			int a = 0;
 			int b = 0;
-			int expect = calc.add(a, b);
-			assertEquals(expect, 0);
+			int actual = calc.add(a, b);
+			assertEquals(0, actual);
 		} catch (Exception e) {
-			System.out.println("testAdd catch");
+			System.out.println("testAdd2 catch");
 		}
 	}
 
@@ -47,10 +47,10 @@ public class CalculatorTest
 		try {
 			int a = -1;
 			int b = -1;
-			int expect = calc.add(a, b);
-			assertEquals(expect, a + b);
+			int actual = calc.add(a, b);
+			assertEquals(-2, actual);
 		} catch (Exception e) {
-			System.out.println("testAdd catch");
+			System.out.println("testAdd3 catch");
 		}
 	}
 
@@ -59,10 +59,10 @@ public class CalculatorTest
 		try {
 			int a = 5;
 			int b = -1;
-			int expect = calc.add(a, b);
-			assertEquals(expect, a + b);
+			int actual = calc.add(a, b);
+			assertEquals(4, actual);
 		} catch (Exception e) {
-			System.out.println("testAdd catch");
+			System.out.println("testAdd4 catch");
 		}
 	}
 
@@ -74,13 +74,12 @@ public class CalculatorTest
 	    int a = 2;
 	    int b = 3;
 
-	    // Fixed by giving assertEquals an expected and actual value.
-		int expect = calc.subtract(a, b);
-	    assertEquals(expect, a - b);
-	    //assertTrue(expect == a - b); // This returns a boolean like assertEqual, but doesn't give a message. 
+	    // Fixed by giving assertEquals an expected and actual value returned by the method.
+		int actual = calc.subtract(a, b);
+	    assertEquals(-1, actual);
 		} 
 		catch (Exception e) {
-	    	System.out.println("testSubtract catch");
+	    	System.out.println("testSubtract1 catch");
 		}
     }
 
@@ -89,10 +88,10 @@ public class CalculatorTest
 		try {
 			int a = 0;
 			int b = 0;
-			int expect = calc.subtract(a, b);
-			assertEquals(expect, a - b);
+			int actual = calc.subtract(a, b);
+			assertEquals(0, actual);
 		} catch (Exception e) {
-			System.out.println("testSubtract catch");
+			System.out.println("testSubtract2 catch");
 		}
 	}
 
@@ -101,10 +100,10 @@ public class CalculatorTest
 		try {
 			int a = -1;
 			int b = -1;
-			int expect = calc.subtract(a, b);
-			assertEquals(expect, a - b);
+			int actual = calc.subtract(a, b);
+			assertEquals(0, actual);
 		} catch (Exception e) {
-			System.out.println("testSubtract catch");
+			System.out.println("testSubtract3 catch");
 		}
 	}
 
@@ -113,10 +112,10 @@ public class CalculatorTest
 		try {
 			int a = 3;
 			int b = -1;
-			int expect = calc.subtract(a, b);
-			assertEquals(expect, a - b);
+			int actual = calc.subtract(a, b);
+			assertEquals(4, actual);
 		} catch (Exception e) {
-			System.out.println("testSubtract catch");
+			System.out.println("testSubtract4 catch");
 		}
 	}
 
@@ -128,13 +127,11 @@ public class CalculatorTest
 	    int a = 2;
 	    int b = 3;
 
-	    // Fixed by giving assertEquals an expected and actual value.
-		int expect = calc.multiply(a, b);
-	    assertEquals(expect, a * b);
-	    //assertTrue(expect == a * b); // This returns a boolean like assertEqual, but doesn't give a message. 
+		int actual = calc.multiply(a, b);
+	    assertEquals(6, actual);
 		} 
 		catch (Exception e) {
-	    	System.out.println("testMultiply catch");
+	    	System.out.println("testMultiply1 catch");
 		}
 	}
 	@Test
@@ -143,10 +140,10 @@ public class CalculatorTest
 		try {
 			int a = 0;
 			int b = 0;
-			int expect = calc.multiply(a, b);
-			assertEquals(expect, a * b);
+			int actual = calc.multiply(a, b);
+			assertEquals(0, actual);
 		} catch (Exception e) {
-			System.out.println("testMultiply catch");
+			System.out.println("testMultiply2 catch");
 		}
 	}
 
@@ -156,10 +153,10 @@ public class CalculatorTest
 		try {
 			int a = -2;
 			int b = -5;
-			int expect = calc.multiply(a, b);
-			assertEquals(expect, a * b);
+			int actual = calc.multiply(a, b);
+			assertEquals(10, actual);
 		} catch (Exception e) {
-			System.out.println("testMultiply catch");
+			System.out.println("testMultiply3 catch");
 		}
 	}
 
@@ -169,24 +166,25 @@ public class CalculatorTest
 		try {
 			int a = 2;
 			int b = -5;
-			int expect = calc.multiply(a, b);
-			assertEquals(expect, a * b);
+			int actual = calc.multiply(a, b);
+			assertEquals(-10, actual);
 		} catch (Exception e) {
-			System.out.println("testMultiply catch");
+			System.out.println("testMultiply4 catch");
 		}
 	}
 
 	// Test for division four different times
+	//Side note: evaluating doubles for equality is deprecated so I will only be using ints.
 	@Test
 	public void testDivide1() 
 	{
 		try {
 			int a = 2;
-			int b = 3;
-			int expect = calc.divide(a, b);
-			assertEquals(expect, a / b);
+			int b = 2;
+			int actual = calc.divide(a, b);
+			assertEquals(1, actual);
 		} catch (Exception e) {
-			System.out.println("testDivide catch");
+			System.out.println("testDivide1 catch");
 		}
 	}
 
@@ -196,10 +194,10 @@ public class CalculatorTest
 		try {
 			int a = 1;
 			int b = 0;
-			int expect = calc.divide(a, b);
-			assertEquals(expect, a / b);
+			int actual = calc.divide(a, b);
+			assertEquals(java.lang.ArithmeticException.class, actual);//Built in exception for dividing by zero
 		} catch (Exception e) {
-			System.out.println("testDivide catch");
+			System.out.println("testDivide2 catch");
 		}
 	}
 
@@ -208,11 +206,11 @@ public class CalculatorTest
 	{
 		try {
 			int a = -2;
-			int b = -5;
-			int expect = calc.divide(a, b);
-			assertEquals(expect, a / b);
+			int b = -2;
+			int actual = calc.divide(a, b);
+			assertEquals(1, actual);
 		} catch (Exception e) {
-			System.out.println("testDivide catch");
+			System.out.println("testDivide3 catch");
 		}
 	}
 
@@ -221,11 +219,23 @@ public class CalculatorTest
 	{
 		try {
 			int a = 2;
-			int b = -5;
-			int expect = calc.divide(a, b);
-			assertEquals(expect, a / b);
+			int b = -2;
+			int actual = calc.divide(a, b);
+			assertEquals(-1, actual);
 		} catch (Exception e) {
-			System.out.println("testDivide catch");
+			System.out.println("testDivide4 catch");
+		}
+	}
+
+	@Test
+	public void squared() 
+	{
+		try {
+			int a = 2;
+			int actual = calc.squared(a);
+			assertEquals(4, actual);
+		} catch (Exception e) {
+			System.out.println("testSquared catch");
 		}
 	}
 }
