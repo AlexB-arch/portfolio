@@ -172,9 +172,19 @@ public class assignment1
             iter++;
         }
     }
-    
+
     public static void Main()
     {
+        assignment1 a1 = new assignment1();
+        a1.Bisection(0, 1, 0.0001, 100);
+        a1.NewtonRaphson(0.5, 0.0001, 100);
+        a1.Secant(0, 1, 0.0001, 100);
+        a1.Muller(0, 1, 2, 0.0001, 100);
+        a1.InverseQuadratic(0, 1, 2, 0.0001, 100);
+        a1.BracketedSecant(0, 1, 0.0001, 100);
 
+        //Print to file
+        Console.SetOut(new System.IO.StreamWriter("output.txt"));
+        
     }
 }
