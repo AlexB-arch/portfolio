@@ -1,6 +1,6 @@
 using System;
 
-public class assignment1
+class assignment1
 {
 
     //Bisection Method
@@ -185,6 +185,5 @@ public class assignment1
 
         //Print to file
         Console.SetOut(new System.IO.StreamWriter("output.txt"));
-        
     }
 }
