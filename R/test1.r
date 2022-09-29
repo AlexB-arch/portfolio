@@ -58,4 +58,4 @@ b <- boxplot(peopleData, horizontal=T, col=c("red", "blue"), pch=16, boxwex=.8, 
 # 2
 temps <- read.delim("377183.txt", header = TRUE)
 
-h <- hist(temps$Temp, breaks=seq(25.5, 35.5, 1), main="Everglades Temp. in Celcius", xlab="Temperature", ylab="Frequency", col="blue", border="black", xlim=c(25.5, 35.5), ylim=c(0, 20), xaxp=c(25.5, 35.5, 5), labels=T)
+h <- hist(temps$Temp, breaks=9, main="Everglades Temp. in Celcius", xlab="Temperature", ylab="Frequency", col="blue", border="black", xlim=c(25.5, 35.5), ylim=c(0, 20), xaxp=c(25.5, 35.5, 5), labels=T)
