@@ -50,19 +50,21 @@ iqrFemale <- q3Female - q1Female
 # IQR from built-in function just in case, but the results are different
 #iqrMale2 <- IQR(peopleData$MALE)
 #iqrFemale2 <- IQR(peopleData$FEMALE)
-
+png("cholesterolBoxplot.png")
 cholesterolBoxplot <- boxplot(peopleData, 
     horizontal = T, 
     col = c("red", "blue"), 
     pch = 16, 
     boxwex = .8, 
     names = c("Males", "Females"))
-
+dev.off()
 ##############################################################################
 
 # 2
 temps <- read.delim("377183.txt", header = TRUE)
 
+# Outputs the histogram to insert into document
+png("tempsHistogram.png")
 tempsHistogram <- hist(temps$Temp, 
     breaks = 9, 
     main = "Everglades Temp. in Celcius", 
@@ -74,7 +76,9 @@ tempsHistogram <- hist(temps$Temp,
     ylim = c(0, 20), 
     xaxp = c(25.5, 35.5, 5), 
     labels = T)
+dev.off()
 
+##############################################################################
 # 3
 # 3a
 carsA <- round((dbinom(0:5, 15, 0.3)), 4)
@@ -92,6 +96,7 @@ carsDSD <- round(sqrt((25 * .3 * (1 - .3))), 4)
 # 3e
 carsE <- round(pnorm(carsDMean + carsDSD, carsDMean, carsDSD) - pnorm(carsDMean - carsDSD, carsDMean, carsDSD), 4)
  
+##############################################################################
  #4
  wpmMean <- 60
  wpmSD <- 15
