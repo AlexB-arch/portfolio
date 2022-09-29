@@ -50,8 +50,11 @@ iqrFemale <- q3Female - q1Female
 # IQR from built-in function just in case, but the results are different
 #iqrMale2 <- IQR(peopleData$MALE)
 #iqrFemale2 <- IQR(peopleData$FEMALE)
+
 png("cholesterolBoxplot.png")
 cholesterolBoxplot <- boxplot(peopleData, 
+    main = "Cholesterol Levels", 
+    xlab = "(in mg/dL)",
     horizontal = T, 
     col = c("red", "blue"), 
     pch = 16, 
