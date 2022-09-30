@@ -17,6 +17,9 @@ medianFemales <- median(peopleData$FEMALE)
 rangeMale <- range(peopleData$MALE)
 rangeFemale <- range(peopleData$FEMALE)
 
+rangeMale <- rangeMale[2] - rangeMale[1]
+rangeFemale <- rangeFemale[2] - rangeFemale[1]
+
 # Variance
 varianceMale <- var(peopleData$MALE)
 varianceFemale <- var(peopleData$FEMALE)
@@ -84,7 +87,7 @@ dev.off()
 ##############################################################################
 # 3
 # 3a
-carsA <- round((dbinom(0:5, 15, 0.3)), 4)
+carsA <- round(sum(dbinom(0:5, 15, 0.3)), 4)
 
 # 3b
 carsB <- round(sum(dbinom(5:10, 15, 0.3)), 4)

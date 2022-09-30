@@ -1,4 +1,4 @@
-'Floride'
+'Flouride'
 0.75
 0.86
 0.84
