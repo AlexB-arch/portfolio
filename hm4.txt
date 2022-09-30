@@ -1,3 +1,0 @@
-Let g(x) = 100 sin10􏰁 and x0 = 1.25. Find x1 and x2
-x2x 0
-of Newton’s method.
