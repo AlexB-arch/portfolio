@@ -13,12 +13,7 @@ public class Turtle {
 
         allCourages += 1;
 
-        if (courages < 3){
-            courages++;
-        }    
-        else if (courages > 3){
-            socialstatus(courages);
-        }
+        courages += 1;
     }
 
     public String socialstatus(int courages){
@@ -27,13 +22,13 @@ public class Turtle {
             return "Disliked";
         }
 
-        else if( courages == 3){
+        else if ( courages == 3){
             return "Loved";
         }
 
-        else
+        else {
             return "Explodes like Master Ugwe";
-            
+        }
     }
 
     public int bravery(){
@@ -50,6 +45,13 @@ public class Turtle {
             
             if(courages != -3)
             courages--;
+        }
+    }
+
+    public void explodes(){
+        // Resets courages to -3 after exploding.
+        if (socialstatus(courages).equals("Explodes like Master Ugwe")){
+             courages = -3;
         }
     }
 

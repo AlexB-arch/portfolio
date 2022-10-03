@@ -2,9 +2,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-import java.io.Console;
-import java.security.Principal;
-
 public class TurtleTest{
     
     Turtle turtle = new Turtle();
@@ -54,13 +51,14 @@ public class TurtleTest{
     @Test
     public void testAllCourages(){
 
-        assertEquals(0, turtle.allCourages());
+       for (int i = 0; i < 6; i++){
+           turtle.seen();
 
-        turtle.seen();
+           // Verify total count of the turtles courage.
+           System.out.println(turtle.allCourages());
 
-
-        assertEquals(1, turtle.allCourages());
-        assertEquals("Disliked", turtle.socialstatus(turtle.courages));
+              assertEquals(6, turtle.allCourages());
+       }
 
     }
 
@@ -70,6 +68,24 @@ public class TurtleTest{
         if (turtle.courages == 3){
             turtle.lose("L");
             assertEquals(2, turtle.bravery());
+        }
+    }
+
+    @Test
+    public void testExplodes(){
+
+        for (int i = 0; i < 7; i++){
+            turtle.seen();
+            System.out.println(turtle.courages);
+        }
+
+        if (turtle.courages > 3){
+            turtle.explodes();
+            System.out.println(turtle.socialstatus(turtle.courages));
+            // Print number of courages before assert.
+            System.out.println(turtle.courages);
+
+            assertEquals(-3, turtle.bravery());
         }
     }
 
