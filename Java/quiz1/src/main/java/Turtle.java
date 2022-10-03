@@ -1,32 +1,39 @@
 public class Turtle {
 
     // Attributes
-    int courages = -3; // They all start with -3.
+    int courages; // They all start with -3.
     int allCourages; //Total count of the turtles courage.
 
+    public Turtle(){
+        courages = -3;
+        allCourages = 0;
+    }
+
     public void seen(){
-        
+
+        allCourages += 1;
+
         if (courages < 3){
             courages++;
-            allCourages++;
         }    
-        else if (courages >= 3){
+        else if (courages > 3){
             socialstatus(courages);
         }
     }
 
     public String socialstatus(int courages){
 
-            if( courages == 3){
-                return "Loved";
-            }
+        if (courages < 3){
+            return "Disliked";
+        }
 
-            else if (courages >= 3) {
-                return "Explodes like Master Ugwe";
-            }
+        else if( courages == 3){
+            return "Loved";
+        }
 
-            else
-             return "Disliked";
+        else
+            return "Explodes like Master Ugwe";
+            
     }
 
     public int bravery(){
