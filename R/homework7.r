@@ -32,5 +32,5 @@ ex464d <- pnorm(1.5) - pnorm(-1.5)
 ex464e <- pnorm(1.5) - pnorm(-1.5)
 
 # 4.68
-
 ex468a <- 1 - 0.01
+ex468b <- pnorm(250, 0.025, 50)
