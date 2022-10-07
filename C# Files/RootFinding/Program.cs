@@ -1,6 +1,8 @@
 ﻿using System.Reflection.Metadata.Ecma335;
 using System.Security.Cryptography.X509Certificates;
 using System.Transactions;
+using System.IO;
+using System;
 
 public class Program
 {
@@ -215,79 +217,88 @@ public class Program
 
     public static void Main()
     {
-        
+
         Program p = new Program();
-        
-        //Bisection Method
-        Console.WriteLine("Bisection Method: \n");
-        Console.WriteLine(p.Bisection(p.eq1, 7.8, 8.4));
-        Console.WriteLine(p.Bisection(p.eq2, 0, 0.5));
-        Console.WriteLine(p.Bisection(p.eq3, 3, 5));
-        Console.WriteLine(p.Bisection(p.eq4, 1, 3));
-        Console.WriteLine(p.Bisection(p.eq5, -2, 0));
-        Console.WriteLine(p.Bisection(p.eq6, -1, 0));
-        Console.WriteLine(p.Bisection(p.eq6, 2, 3));
-        Console.WriteLine(p.Bisection(p.eq7, -1.25, -0.75));
-        Console.WriteLine("-------------------------------");
 
 
-        //Newton Method
-        Console.WriteLine("\nNewton's Method: \n");
-        Console.WriteLine(p.Newton(p.eq1, p.eq1d, 7));
-        Console.WriteLine(p.Newton(p.eq2, p.eq2d, 0));
-        Console.WriteLine(p.Newton(p.eq3, p.eq3d, 3));
-        Console.WriteLine(p.Newton(p.eq4, p.eq4d, 1));
-        Console.WriteLine(p.Newton(p.eq5, p.eq5d, -4));
-        Console.WriteLine(p.Newton(p.eq6, p.eq6d, -0.5));
-        Console.WriteLine(p.Newton(p.eq6, p.eq6d, 2.5));
-        Console.WriteLine(p.Newton(p.eq7, p.eq7d, -1));
-        Console.WriteLine("-------------------------------");
+        string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\Roots.txt";
 
-        //Secant Method
-        Console.WriteLine("\nSecant Method:\n");
-        Console.WriteLine(p.Secant(p.eq1, 7, 7.5));
-        Console.WriteLine(p.Secant(p.eq2, 0, 0.5));
-        Console.WriteLine(p.Secant(p.eq3, 3, 5));
-        Console.WriteLine(p.Secant(p.eq4, 1, 3));
-        Console.WriteLine(p.Secant(p.eq5, -2, 0));
-        Console.WriteLine(p.Secant(p.eq6, -1, 0));
-        Console.WriteLine(p.Secant(p.eq6, 2, 3));
-        Console.WriteLine(p.Secant(p.eq7, -1.25, -0.75));
-        Console.WriteLine("-------------------------------");
+        // Print out the results into a file on your desktop folder.
+        using (StreamWriter sw = new StreamWriter(path))
+        {
 
-        //Muller's Method
-        Console.WriteLine("\nMuller's Method:\n");
-        Console.WriteLine(p.Muller(p.eq1, 7, 7.5, 7.75));
-        Console.WriteLine(p.Muller(p.eq2, 0, 0.5, 0.2));
-        Console.WriteLine(p.Muller(p.eq3, 3, 5, 4));
-        Console.WriteLine(p.Muller(p.eq4, 1, 3, 2));
-        Console.WriteLine(p.Muller(p.eq5, -2, 0, -1));
-        Console.WriteLine(p.Muller(p.eq6, -1, 0, -0.5));
-        Console.WriteLine(p.Muller(p.eq6, 2, 3, 2.5));
-        Console.WriteLine(p.Muller(p.eq7, -1.25, -0.75, -1));
-        Console.WriteLine("-------------------------------");
+            //Bisection Method
+            sw.WriteLine("Bisection Method: \n");
+            sw.WriteLine(p.Bisection(p.eq1, 7.8, 8.4));
+            sw.WriteLine(p.Bisection(p.eq2, 0, 0.5));
+            sw.WriteLine(p.Bisection(p.eq3, 3, 5));
+            sw.WriteLine(p.Bisection(p.eq4, 1, 3));
+            sw.WriteLine(p.Bisection(p.eq5, -2, 0));
+            sw.WriteLine(p.Bisection(p.eq6, -1, 0));
+            sw.WriteLine(p.Bisection(p.eq6, 2, 3));
+            sw.WriteLine(p.Bisection(p.eq7, -1.25, -0.75));
+            sw.WriteLine("-------------------------------");
 
-        //Inverse Quadratic Interpolation Method
-        Console.WriteLine("\nInverse Quadratic Interpolation:");
-        Console.WriteLine(p.InverseQuadratic(p.eq1, 7, 7.5, 7.75));
-        Console.WriteLine(p.InverseQuadratic(p.eq2, 0, 0.5, 0.2));
-        Console.WriteLine(p.InverseQuadratic(p.eq3, 3, 5, 4));
-        Console.WriteLine(p.InverseQuadratic(p.eq4, 1, 3, 2));
-        Console.WriteLine(p.InverseQuadratic(p.eq5, -2, 0, -1));
-        Console.WriteLine(p.InverseQuadratic(p.eq6, -1, 0, -0.5));
-        Console.WriteLine(p.InverseQuadratic(p.eq6, 2, 3, 2.5));
-        Console.WriteLine(p.InverseQuadratic(p.eq7, -1.25, -0.75, -1));
-        Console.WriteLine("-------------------------------");
 
-        //False Position Method
-        Console.WriteLine("\nFalse Position Method:\n");
-        Console.WriteLine(p.FalsePosition(p.eq1, 7, 7.5));
-        Console.WriteLine(p.FalsePosition(p.eq2, 0, 0.5));
-        Console.WriteLine(p.FalsePosition(p.eq3, 3, 5));
-        Console.WriteLine(p.FalsePosition(p.eq4, 1, 3));
-        Console.WriteLine(p.FalsePosition(p.eq5, -2, 0));
-        Console.WriteLine(p.FalsePosition(p.eq6, -1, 0));
-        Console.WriteLine(p.FalsePosition(p.eq6, 2, 3));
-        Console.WriteLine(p.FalsePosition(p.eq7, -1.25, -0.75));
+            //Newton Method
+            sw.WriteLine("\nNewton's Method: \n");
+            sw.WriteLine(p.Newton(p.eq1, p.eq1d, 7));
+            sw.WriteLine(p.Newton(p.eq2, p.eq2d, 0));
+            sw.WriteLine(p.Newton(p.eq3, p.eq3d, 3));
+            sw.WriteLine(p.Newton(p.eq4, p.eq4d, 1));
+            sw.WriteLine(p.Newton(p.eq5, p.eq5d, -4));
+            sw.WriteLine(p.Newton(p.eq6, p.eq6d, -0.5));
+            sw.WriteLine(p.Newton(p.eq6, p.eq6d, 2.5));
+            sw.WriteLine(p.Newton(p.eq7, p.eq7d, -1));
+            sw.WriteLine("-------------------------------");
+
+            //Secant Method
+            sw.WriteLine("\nSecant Method:\n");
+            sw.WriteLine(p.Secant(p.eq1, 7, 7.5));
+            sw.WriteLine(p.Secant(p.eq2, 0, 0.5));
+            sw.WriteLine(p.Secant(p.eq3, 3, 5));
+            sw.WriteLine(p.Secant(p.eq4, 1, 3));
+            sw.WriteLine(p.Secant(p.eq5, -2, 0));
+            sw.WriteLine(p.Secant(p.eq6, -1, 0));
+            sw.WriteLine(p.Secant(p.eq6, 2, 3));
+            sw.WriteLine(p.Secant(p.eq7, -1.25, -0.75));
+            sw.WriteLine("-------------------------------");
+
+            //Muller's Method
+            sw.WriteLine("\nMuller's Method:\n");
+            sw.WriteLine(p.Muller(p.eq1, 7, 7.5, 7.75));
+            sw.WriteLine(p.Muller(p.eq2, 0, 0.5, 0.2));
+            sw.WriteLine(p.Muller(p.eq3, 3, 5, 4));
+            sw.WriteLine(p.Muller(p.eq4, 1, 3, 2));
+            sw.WriteLine(p.Muller(p.eq5, -2, 0, -1));
+            sw.WriteLine(p.Muller(p.eq6, -1, 0, -0.5));
+            sw.WriteLine(p.Muller(p.eq6, 2, 3, 2.5));
+            sw.WriteLine(p.Muller(p.eq7, -1.25, -0.75, -1));
+            sw.WriteLine("-------------------------------");
+
+            //Inverse Quadratic Interpolation Method
+            sw.WriteLine("\nInverse Quadratic Interpolation:");
+            sw.WriteLine(p.InverseQuadratic(p.eq1, 7, 7.5, 7.75));
+            sw.WriteLine(p.InverseQuadratic(p.eq2, 0, 0.5, 0.2));
+            sw.WriteLine(p.InverseQuadratic(p.eq3, 3, 5, 4));
+            sw.WriteLine(p.InverseQuadratic(p.eq4, 1, 3, 2));
+            sw.WriteLine(p.InverseQuadratic(p.eq5, -2, 0, -1));
+            sw.WriteLine(p.InverseQuadratic(p.eq6, -1, 0, -0.5));
+            sw.WriteLine(p.InverseQuadratic(p.eq6, 2, 3, 2.5));
+            sw.WriteLine(p.InverseQuadratic(p.eq7, -1.25, -0.75, -1));
+            sw.WriteLine("-------------------------------");
+
+            //False Position Method
+            sw.WriteLine("\nFalse Position Method:\n");
+            sw.WriteLine(p.FalsePosition(p.eq1, 7, 7.5));
+            sw.WriteLine(p.FalsePosition(p.eq2, 0, 0.5));
+            sw.WriteLine(p.FalsePosition(p.eq3, 3, 5));
+            sw.WriteLine(p.FalsePosition(p.eq4, 1, 3));
+            sw.WriteLine(p.FalsePosition(p.eq5, -2, 0));
+            sw.WriteLine(p.FalsePosition(p.eq6, -1, 0));
+            sw.WriteLine(p.FalsePosition(p.eq6, 2, 3));
+            sw.WriteLine(p.FalsePosition(p.eq7, -1.25, -0.75));
+
+        }
     }
 }
