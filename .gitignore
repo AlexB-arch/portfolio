@@ -17,26 +17,13 @@ webdev-325
 node_modules
 *bootstrap*
 *Finca*
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cbedf80 (Adds config files temporarily)
-=======
 package-lock*
->>>>>>> 25a230c (Updates gitignore)
 tailwind*
-<<<<<<< HEAD
 webdev-325
-<<<<<<< HEAD
-=======
 Shapes
 Fraction
 DateOne
 MX
 portfolio_site
->>>>>>> 6119e78 (Some commit)
-=======
->>>>>>> cbedf80 (Adds config files temporarily)
 Training/node-express-dashboard
 Heroku/stark-plateau-45266
