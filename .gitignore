@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 .vscode
 *.vs
 *.sln
@@ -27,3 +28,48 @@ MX
 portfolio_site
 Training/node-express-dashboard
 Heroku/stark-plateau-45266
+=======
+.vscode
+*.vs
+*.sln
+*.css
+bin
+obj
+*.csproj
+.DS_Store
+*Assets*
+Midterm
+*.plist
+*storyboard
+AppDelegate*
+*Resources
+webdev-325
+*.exe
+*ViewController
+node_modules
+*bootstrap*
+*Finca*
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cbedf80 (Adds config files temporarily)
+=======
+package-lock*
+>>>>>>> 25a230c (Updates gitignore)
+tailwind*
+<<<<<<< HEAD
+webdev-325
+<<<<<<< HEAD
+=======
+Shapes
+Fraction
+DateOne
+MX
+portfolio_site
+>>>>>>> 6119e78 (Some commit)
+=======
+>>>>>>> cbedf80 (Adds config files temporarily)
+Training/node-express-dashboard
+Heroku/stark-plateau-45266
+>>>>>>> Stashed changes
