@@ -49,6 +49,12 @@ class Method {
         classMethod(simpleclassArg);
         System.out.println("after return from classMethod: simpleclassArg.intMember = " + simpleclassArg.intMember );
 
+        // adds charArg = '8'
+        char charArg = '8';
+        System.out.println("before invoking charMethod: charArg = " + charArg);
+        charMethod(charArg);
+        System.out.println("after return from charMethod: charArg = " + charArg );
+
     }
 
     // intMethod: add 100 to intArg
@@ -78,13 +84,13 @@ class Method {
 
     // add charMethod(char charArg) here
     public static void charMethod(char charArg){
-        charArg = (char) (charArg + 100);
+        charArg = (char) (charArg + '1');
         System.out.println("inside charMethod: charArg = " + charArg);
     }
 
     // add StringMethod(String StringArg) here
     public static void StringMethod(String StringArg){
-        StringArg = StringArg + 100;
+        StringArg = StringArg.concat("100");
         System.out.println("inside StringMethod: StringArg = " + StringArg);
     }
 
