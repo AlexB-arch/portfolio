@@ -17,6 +17,6 @@ int main ()
     cin >> height;
     cout << endl;
 //Gives the area of the triangle
-    area = base*height/2;
+    area = (base*height)/2;
     cout << "The area is " << area << endl;
 }

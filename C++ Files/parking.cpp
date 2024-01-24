@@ -9,54 +9,64 @@ int main(){
     cout << "Enter parking duration (in minutes): ";
     cin >> minutes;
 
-    if(minutes <= 30){
-        cout << "Parking cost = $" << cost;
-    }
-    if(minutes >= 31 && minutes <= 60){
-        cout << "Parking cost = $" << cost + 2;
-    }
-    if(minutes > 60){
-        if(minutes >= 90 && minutes <= 120)
-        cout << "Parking cost = $" << cost + 4;
-            if(minutes >= 121 && minutes <= 150)
-            cout << "Parking cost = $" << cost + 5;
-                if(minutes >= 151 && minutes <= 180)
-                cout << "Parking cost = $" << cost + 6;
-                    if(minutes >= 181 && minutes <= 210)
-                    cout << "Parking cost = $" << cost + 7;
-                        if(minutes >= 211 && minutes <=240)
-                        cout << "Parking cost = $" << cost + 8;
-                            if(minutes >= 241 && minutes <= 270)
-                            cout << "Parking cost = $" << cost + 9;
-                                if(minutes >=271 && minutes <= 300)
-                                cout << "Parking cost = $" << cost + 10;
-                                    if(minutes >= 301 && minutes <= 330)
-                                    cout << "Parking cost = $" << cost + 11;
-                                        if(minutes >= 331 && minutes <= 360)
-                                        cout << "Parking cost = $" << cost + 12;
-                                            if(minutes >= 361 && minutes <= 390)
-                                            cout << "Parking cost = $" << cost + 13;
-                                                if(minutes >= 391 && minutes <= 420)
-                                                cout << "Parking cost = $" << cost + 14;
-                                                    else
-                                                    cout << "Parking cost = $" << cost + 3;
-    }
-    if(minutes > 420){
-        if(minutes>420&&minutes<=480)
-        cout << "Parking cost = $" << cost + 15;
-            if(minutes>=481&&minutes<=540)
-            cout << "Parking cost = $" << cost + 16;
-                if(minutes>=541&&minutes<=600)
-                cout << "Parking cost = $" << cost + 17;
-                    if(minutes>=601&&minutes<=660)
-                    cout << "Parking cost = $" << cost + 18;
-                        if(minutes>=661&&minutes<=720)
-                        cout << "Parking cost = $" << cost + 19;
-                            if(minutes>=721&&minutes<=780)
-                            cout << "Parking cost = $" << cost + 20;
-                                else
-                                cout << "Parking cost = $" << cost + 21;
+    switch (minutes)
+    {
+        case 0 ... 30:
+            cost = 0;
+            break;
 
+        case 31 ... 60:
+            cost = 2;
+            break;
+
+        case 90 ... 120:
+            cost = 4;
+            break;
+
+        case 121 ... 150:
+            cost = 5;
+            break;
+
+        case 151 ... 180:    
+            cost = 6;
+            break;
+
+        case 181 ... 210:
+            cost = 7;
+            break;
+
+        case 211 ... 240:    
+            cost = 8;
+            break;
+        
+        case 241 ... 270:
+            cost = 9;
+            break;
+
+        case 271 ... 300:
+            cost = 10;
+            break;
+
+        case 301 ... 330:    
+            cost = 11;
+            break;
+
+        case 331 ... 360:    
+            cost = 12;
+            break;
+
+        case 361 ... 390:
+            cost = 13;
+            break;
+
+        case 391 ... 420:
+            cost = 14;
+            break;
+
+        default:
+            cost = 25;
+            break;
     }
 
+    cout << "Parking Cost: $" << cost << endl;
 }

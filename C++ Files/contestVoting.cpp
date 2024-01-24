@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
-#include "p2queue.h"
+#include "p2queue2.h"
 #include "p2map.h"
 #include "p2priorityqueue.h"
 using namespace std;
@@ -21,8 +21,8 @@ int main(){
     
 
     initialize(allContestants);
-    initialize(phoneNumbers);
-    initialize(votesSoFar);
+    initialize(phoneNumbers, 100);
+    initialize(votesSoFar, 100);
     initialize(ranking);
 
     cout << "Enter filename containing list of contestants: ";

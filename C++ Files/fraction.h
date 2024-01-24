@@ -1,4 +1,3 @@
-/ Include iostream to get access to istream, ostream
 #include <iostream>
 using namespace std;
 

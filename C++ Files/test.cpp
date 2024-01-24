@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cassert>
-#include "p2priorityqueue2.h"
+#include "p2priorityqueue.h"
 using namespace std;
 
 int main()
