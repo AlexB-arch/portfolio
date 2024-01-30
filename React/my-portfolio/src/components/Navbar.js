@@ -1,12 +1,7 @@
 export default function Navbar() {
 	return (
-		<nav>
-			<h1>My Portfolio</h1>
-			<ul>
-			<a>Home</a>
-			<a>About</a>
-			<a>Projects</a>
-			</ul>
+		<nav id="Navbar" className="shadow-sm">
+			<h2>My Portfolio</h2>
 		</nav>
 	);
 }
