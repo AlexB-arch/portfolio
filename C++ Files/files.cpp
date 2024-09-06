@@ -6,14 +6,16 @@ using namespace std;
 int main()
 {
     ifstream fin; 
+    #include <sstream> // Include the <sstream> header file
+
     string filename;
     string codedWords[1000];
     int id;
     stringstream ss[1000];
-    
+
     cout << "Enter filename: ";
     cin >> filename;
-    
+
     // Open file using provided filename
     fin.open(filename.c_str()); 
 
