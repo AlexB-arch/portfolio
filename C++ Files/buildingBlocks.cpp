@@ -1,7 +1,8 @@
 #include <iostream>
 #include <sstream>
 #include <algorithm>
-#include "p2set1.h"
+#include "p2set.h"
+
 using namespace std;
 
 void swap(int *xp, int *yp)  

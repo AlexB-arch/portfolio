@@ -4,10 +4,10 @@
 #include "p2set.h"
 using namespace std;
 
-string sameTeam(Set<string> teams[], string name){
+string sameTeam(Set<string> teams, string name){
     string yes;
     for(int i = 0; i < 10; i++){
-        if(contains(teams[i], name)){
+        if(contains(teams, name)){
             yes = name;
         }
     }
@@ -17,7 +17,7 @@ string sameTeam(Set<string> teams[], string name){
 
 int main(){
 
-   Set<string> teams[10];
+   Set<string> teams;
    ifstream fin;
    ofstream fout;
    string names, individual;
@@ -36,7 +36,7 @@ int main(){
        while(getline(fin, names)){
            //Then extract the names of a team individually to input in the set.
            while(ss >> individual){
-               teams[teamCount] = insert(teams, individual);
+               insert(teams, individual);
            }
         teamCount++;
        }       

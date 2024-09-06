@@ -26,8 +26,8 @@ int main(){
     string member, file;
     int currentMemFee = 0, newMemFee = 0, unique = 0;
 
-    initialize(oldMembers);
-    initialize(newMembers);
+    initialize(oldMembers, 100);
+    initialize(newMembers, 100);
 
     fin.open("8A_past.txt");
     if(fin.is_open()){

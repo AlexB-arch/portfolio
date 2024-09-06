@@ -1,5 +1,5 @@
 #include <iostream>
-#include "p2queue.h"
+#include "p2queue2.h"
 #include "p2stack.h"
 #include "p2priorityqueue.h"
 using namespace std;
