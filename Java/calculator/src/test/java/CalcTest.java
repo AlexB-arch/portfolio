@@ -3,6 +3,8 @@ import org.junit.Test;
 
 /*
  * Modern devs say to start with tests.
+ * 
+ * @Before runs before the @Test tags
  */
 
 public class CalcTest{
