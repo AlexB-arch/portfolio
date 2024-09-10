@@ -96,5 +96,4 @@ public class CalcTest{
       assertEquals("Cannot divide by zero", e.getMessage());
     }
   }
-
 }
