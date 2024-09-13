@@ -40,3 +40,10 @@ anotherTestB = [1,1,2,2,3,4]
 
 # Should return [1, 2, 2, 4]
 print(CommonValues(anotherTestA, anotherTestB))
+
+# Test case with no common values
+noCommonA = [1,2,3,4,5]
+noCommonB = [6,7,8,9,10]
+
+# Should return []
+print(CommonValues(noCommonA, noCommonB))
