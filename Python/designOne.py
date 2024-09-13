@@ -1,6 +1,3 @@
-import re
-
-
 def MaxSubsequenceSum(listOfNumbers):
   total = 0
   maximum = 0
