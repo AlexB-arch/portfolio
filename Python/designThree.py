@@ -3,9 +3,6 @@
 # Describe an efficient algorithm that modifies the array values to hold a wobbly list that is a permutation of the original values in L.
 # Must run on linear time, O(n).
 
-import re
-import time
-
 def Wobbly(L):
   length = len(L)
 
@@ -21,6 +18,7 @@ def Wobbly(L):
 # Test cases
 print(Wobbly([0,1,2,3,4]))
 print(Wobbly([1,2,3,4,5]))
+print(Wobbly([3,5,2,1,4]))
 print(Wobbly([7,6,5,4,3,2,1]))
 
 # Notes:
