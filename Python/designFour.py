@@ -17,10 +17,11 @@ def subArraySum(array, s):
             sum -= array[left]
             left += 1
 
+    # Returns the size, not the array
     return min_length if min_length != len(array) + 1 else 0
     
 
 # Test cases
-print(subArraySum([2,3,1,2,4,3], 7)) # 2
+print(subArraySum([2,3,1,2,4,3], 7)) # Should be 2 as specified in the homework.
 print(subArraySum([2,3,1,2,4,3], 100)) # 0
 print(subArraySum([1,2,3,4,5], 11)) # 3
