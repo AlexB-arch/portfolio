@@ -1,0 +1,139 @@
+---
+title: "Homework 6"
+format: pdf
+---
+
+### 4.40
+
+a\.
+
+```{r}
+# The file in Google Drive had the wrong values so I did them by hand.
+values = data.frame("y"= c(0,1,2,3,4,5,6,7,8,9,10),
+                    "P(y)" = c(0.100,0.130,0.250,0.160, .095, .075, .063, .047, .041, .024, .015))
+
+plot.default(values, xlab = "y", ylab = "P(y)")
+```
+
+b\. $P(y <= 2)$
+
+```{r}
+# Index starts at 1, this gets values y = 0, 1, and 2
+b = values$P.y.[1] + values$P.y.[2] + values$P.y.[3]
+b
+```
+
+c\. $P(y > 7)$
+
+```{r}
+c = values$P.y.[9] + values$P.y.[10] + values$P.y.[11]
+c
+```
+
+d\. $P( 2 < y <= 7)$
+
+```{r}
+d = values$P.y.[4] + values$P.y.[5] + values$P.y.[6] + values$P.y.[7] + values$P.y.[8]
+d
+```
+
+### 4.45
+
+a\.
+
+```{r}
+a = dbinom(15, 15, .2)
+a
+```
+
+b\.
+
+```{r}
+b = dbinom(6, 15, .2)
+b
+```
+
+c\.
+
+```{r}
+c = sum(dbinom(6:15, 15, .2))
+c
+```
+
+d\.
+
+```{r}
+d = dbinom(0, 15, .2)
+d
+```
+
+### 4.46
+
+a\.
+
+```{r}
+a = dbinom(20,20,.85)
+a
+```
+
+b\.
+
+```{r}
+b = dbinom(6, 20, .05)
+b
+```
+
+c\.
+
+```{r}
+c = sum(dbinom(6:20, 20, .5))
+c
+```
+
+d\.
+
+```{r}
+d = dbinom(0, 20, .85)
+d
+```
+
+### 4.48
+
+a\.
+
+```{r}
+a = sum(dbinom(5:50, 50, .1))
+a
+```
+
+b\. That all patients are infected independently and they all have the same change of getting infected.
+
+### 4.111
+
+a\.
+
+```{r}
+a = dbinom(0, 12, 1/8)
+a
+```
+
+b\.
+
+```{r}
+b = sum(dbinom(2:12, 12, 1/8))
+b
+```
+
+c\.
+
+```{r}
+c = sum(dbinom(0:4, 12, 1/8))
+c
+```
+
+### 4.112
+
+```{r}
+a = sum(dbinom(251:260, 260, .95))
+a
+```
