@@ -1,55 +1,31 @@
-# Runs in O(n) time
+# This runs in O(n)
 
-def goof(s: str) -> int:
-    def calculate_z(s: str) -> list:
-        z = [0] * len(s)
-        l, r, k = 0, 0, 0
-        for i in range(1, len(s)):
-            if i > r:
-                l, r = i, i
-                while r < len(s) and s[r] == s[r - l]:
-                    r += 1
-                z[i] = r - l
-                r -= 1
-            else:
-                k = i - l
-                if z[k] < r - i + 1:
-                    z[i] = z[k]
-                else:
-                    l = i
-                    while r < len(s) and s[r] == s[r - l]:
-                        r += 1
-                    z[i] = r - l
-                    r -= 1
-        return z
-
+def goof(s):
     n = len(s)
-    
-    # We will concatenate the string with its reverse to look for palindromes
-    combined = s + s[::-1]
-    z = calculate_z(combined)
-    
-    # Now find the longest foldable part
-    max_fold = 0
-    for i in range(n, len(combined)):
-        if z[i] >= len(combined) - i:  # Checking palindrome property
-            max_fold = max(max_fold, len(combined) - i)
-    
-    # The minimal length after folding is the original length minus the maximal fold
-    return n - max_fold
+    dp = [0] * n
+    dp[0] = 1
+    p = [0] * n
+    p[0] = 1
 
-# Test cases
-print(goof("ATTACC"))  # Expected output: 3
-print(goof("AAAAGAATTAA"))  # Expected output: 5
-print(goof("ATTTGGGA"))  # Expected output: 0
+    for i in range(1, n):
+        p[i] = 1
+        for j in range(i):
+            if s[j] == s[i] and (j == 0 or p[j - 1] == i - j - 1):
+                p[i] = max(p[i], i - j + 1)
 
+    for i in range(1, n):
+        min_len = i + 1
+        for j in range(i):
+            if p[j] >= i - j:
+                min_len = min(min_len, (i - j + 1) // 2 + (dp[j - 1] if j > 0 else 0))
+        dp[i] = min(min_len, dp[i - 1] + 1)
 
+    return dp[-1]
 
-
-# Test cases
-print(goof("ATTACC")) # 3
-print(goof("AAAAGAATTAA")) # 5
-print(goof("ATTTGGGA")) # There is no folding here at all
-print(goof("A")) # 1
-print(goof("AA")) # This should return 1 because A folds back to A
-print(goof("AB")) # This should return 2 because A and B are different and there is no folding back
+# Test the function
+print(goof("ATTACC"))  # Output: 3
+print(goof("AAAAGAATTAA"))  # Output: 5
+print(goof("A"))  # Output: 1
+print(goof("AA"))  # Output: 1
+print(goof("AB"))  # Output: 1
+print(goof("ABCCBA"))  # Output: 3

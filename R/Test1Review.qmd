@@ -54,9 +54,9 @@ editor: visual
 
 7.  **Variance -**
 
-    $ s^2 = \sum(y_i - mean)^2/ n - 1$
+    \$ s\^2 = \sum(y_i - mean)\^2/ n - 1\$
 
-    Variance Coefficient: $ CV = Standard Deviation/ |mean|$
+    Variance Coefficient: \$ CV = Standard Deviation/ \|mean\|\$
 
 8.  **Standard Deviation** - A measure of variation of all values\
     from the mean. Can vary greatly when including outliers.

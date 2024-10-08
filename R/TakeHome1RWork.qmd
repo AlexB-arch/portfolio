@@ -1,0 +1,143 @@
+---
+title: "Take-Home Test 1 R Work"
+author: "Alex Burgos"
+format: pdf
+editor: visual
+---
+
+1.  
+
+    ```{r}
+    homeruns <- read.csv("~/Downloads/hr.txt")
+    #a
+    aMean = tapply(homeruns$Distance, homeruns$Player, mean)
+    aMean
+
+    aMedian = tapply(homeruns$Distance, homeruns$Player, median)
+    aMedian
+
+    myRange = function(homeruns){
+      max(homeruns) - min(homeruns)
+    }
+    aRange = tapply(homeruns$Distance, homeruns$Player, myRange)
+    aRange
+
+    aVariance = tapply(homeruns$Distance, homeruns$Player, var)
+    aVariance
+
+    aStdDev = tapply(homeruns$Distance, homeruns$Player, sd)
+    aStdDev
+
+    cv = function(homeruns) {
+      (sd(homeruns) / mean(homeruns)) * 100
+    }
+    aCV = tapply(homeruns$Distance, homeruns$Player, cv)
+    aCV
+
+    aMin = tapply(homeruns$Distance, homeruns$Player, min)
+    aMin
+
+    aMax = tapply(homeruns$Distance, homeruns$Player, max)
+    aMax
+
+    # IQR
+    aiqr = summary(homeruns$Distance)
+    aQ1 = 384
+    aQ3 = 430
+    aQ3 - aQ1
+    ```
+
+1b.
+
+```{r}
+# Wrote in new lines to make it more legible in a code block.
+boxplot(homeruns$Distance~homeruns$Player,
+        main = "Homeruns", 
+        xlab = "Player",
+        ylab = "Distance", 
+        col="blue")
+```
+
+### 2.
+
+```{r}
+cholesterol <- read.csv("~/Downloads/cholesterol.txt")
+
+# Males
+mSummary = summary(cholesterol$M)
+mSummary
+
+# Females
+fSummary = summary(cholesterol$F)
+fSummary
+
+mRange = max(cholesterol$M) - min(cholesterol$M)
+mRange
+
+fRange = max(cholesterol$F) - min(cholesterol$F)
+fRange
+
+mVar = var(cholesterol$M)
+mVar
+
+fVar = var(cholesterol$F)
+fVar
+
+mSD = sd(cholesterol$M)
+mSD
+
+fSD = sd(cholesterol$F)
+fSD
+
+mCV = mSD/mean(cholesterol$M) * 100
+mCV
+
+fCV = fSD/mean(cholesterol$F) * 100
+fCV
+
+miqr = 227 - 173
+miqr
+
+fiqr = 239 - 178
+fiqr
+```
+
+2b.
+
+```{r}
+# Males
+
+hist(cholesterol$M, breaks=seq(49.5, 500, by=50), col = "blue", main = "Males", )
+```
+
+```{r}
+# Females
+
+hist(cholesterol$F, breaks=seq(49.5, 500, 50), col = "green", main = "Females")
+```
+
+### 5.
+
+```{r}
+a = dbinom(6, 10, 0.65) * 100
+a
+
+b = sum(dbinom(4:8, 10, 0.65)) * 100
+b
+```
+
+### 6.
+
+```{r}
+a = pnorm(11, 14, 1)
+a
+
+b = 1 - pnorm(18, 14, 1)
+b
+
+c = qnorm(0.05,0,1)
+c
+
+d = pnorm(20, 14, 1) - pnorm(15, 14, 1)
+d
+```
