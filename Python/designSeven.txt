@@ -1,0 +1,23 @@
+function findHomemadeCupcake(A[1..n], W):
+    # A is the array of cupcake weights
+    # W is the known weight of a normal cupcake
+    return locateHomemade(A, 1, n, W)
+
+function locateHomemade(A, low, high, W):
+    if low == high:
+        # If we have a single cupcake left, it must be the homemade one
+        return low
+
+    mid = (low + high) // 2
+    leftSize = mid - low + 1
+    expectedLeftWeight = leftSize * W
+
+    # Get the actual weight of the left half
+    actualLeftWeight = MAGICWEIGHT(A[low..mid])
+
+    if actualLeftWeight < expectedLeftWeight:
+        # The homemade cupcake is in the left half
+        return locateHomemade(A, low, mid, W)
+    else:
+        # The homemade cupcake must be in the right half
+        return locateHomemade(A, mid + 1, high, W)
