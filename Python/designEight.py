@@ -1,4 +1,4 @@
-# Runs in O(n)
+# Runs in O(n) 
 
 def findSum(A, B):
     results = {}
