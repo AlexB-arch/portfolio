@@ -1,0 +1,20 @@
+function majorityElement(A, low, high):
+    if low == high:
+        return A[low]
+
+    mid = (low + high) // 2
+    left_majority = majorityElement(A, low, mid)
+    right_majority = majorityElement(A, mid + 1, high)
+
+    if left_majority == right_majority:
+        return left_majority
+
+    left_count = countOccurrences(A, left_majority)
+    right_count = countOccurrences(A, right_majority)
+
+    if left_count > (high - low + 1) // 2:
+        return left_majority
+    elif right_count > (high - low + 1) // 2:
+        return right_majority
+    else:
+        return None
