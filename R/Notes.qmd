@@ -1,0 +1,11 @@
+---
+title: "Notes"
+format: pdf
+editor: visual
+---
+
+### t test
+
+t.test(values1, values2, alternative="l", var.equal="TRUE")
+
+-   This should be a two sample t-test.
