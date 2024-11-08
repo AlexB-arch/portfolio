@@ -1,0 +1,193 @@
+---
+format: pdf
+editor: visual
+---
+
+# 1.
+
+Test Used: Two-tailed Z-test
+
+$$
+H_0:\mu = 500
+$$
+
+$$
+H_a: \mu \neq 500
+$$
+
+Test statistic: z = 1.885618
+
+Critical Value: 2.575829
+
+Rejection Region: (z \< -2.575829, z \> 2.575829)
+
+p-value: 0.5865993
+
+Decision: Fail to reject H0 because it is within the rejection region and p value is greater than alpha.
+
+Conclusion: There is not enough evidence to conclude that the sample mean is different than 500.
+
+## a.
+
+Test statistic: 1.885618
+
+Critical Value: 2.575829
+
+Not enough evidence to reject because z is not greater than 2.5758.
+
+## b.
+
+Probability of Type II Error: 0.5866
+
+## c.
+
+| mu  | Power      |
+|-----|------------|
+| 450 | 0.98375039 |
+| 460 | 0.88403595 |
+| 470 | 0.59971053 |
+| 480 | 0.24503475 |
+| 490 | 0.05144925 |
+| 510 | 0.05144925 |
+| 520 | 0.24503475 |
+| 530 | 0.59971053 |
+| 540 | 0.88403595 |
+| 550 | 0.98375039 |
+
+## d.
+
+Probability of Type II Error: 0.224374
+
+## e.
+
+Required Sample Size to achieve Beta \<= 0.04: 169
+
+# 2.
+
+Test Used: Right tail Z-test
+
+$$
+H_0:\mu = 41
+$$
+
+$$
+H_a: \mu > 41
+$$
+
+Test statistic: z = 1.084209
+
+Critical Value: 1.644854
+
+Rejection Region: (z \<= -1.644854, z =\> 1.644854)
+
+p-value: 0.139136
+
+Decision: Fail to reject H0 due to the p-value being greater than alpha and z being within the rejection region.
+
+Conclusion: There is not enough evidence at the 0.05 significance level to conclude that mean sunspot activity was greater than 41.
+
+## a.
+
+95% Confidence Interval: ( 36.15359 , 57.84641 )
+
+## b.
+
+z = 1.084209
+
+Critical Value = 1.644854
+
+p-value = 0.139136
+
+# 3.
+
+Test Used: Paired T-test
+
+$$
+H_0:\mu_0 - \mu_1 \le 0
+$$
+
+$$
+H_a: \mu_0 - \mu_1 > 0
+$$
+
+Test statistic: t = 1.8824
+
+Critical Value: 1.689572
+
+Rejection Region: t \>= 1.689572
+
+p-value: 0.03406
+
+Decision: Reject H0 because the value of 't' is greater than the critical value and alpha is greater than the p-value.
+
+Conclusion: There is sufficient evidence to conclude that the mean cost of living index for housing is higher than that for groceries in these metropolitan areas.
+
+## a.
+
+There is sufficient evidence to conclude that the mean cost of living index for housing is higher than that for groceries in these metropolitan areas.
+
+## b.
+
+The mean lies within the (0.4381481, 8.117408) interval.
+
+# 4.
+
+## a.
+
+Test Used: Two-sample T-test
+
+$$
+H_0:\mu_a \ge \mu_b
+$$
+
+$$
+H_a:\mu_a < \mu_b
+$$
+
+Test statistic: t = -2.0059
+
+Critical Value: -1.701131
+
+Rejection Region: t \< -1.701131
+
+p-value: 0.0274
+
+Decision: Fail to reject H0, the p-value is greater than alpha, and the test statistic is not in the rejection region.
+
+Conclusion: At the 0.05 significance level, there is not sufficient evidence to conclude that field A has, on average, a lower soil water content than field B.
+
+## b.
+
+(−0.334, 4.178). We can be 95% confident that the true difference in mean water content is between -0.334% and 4.178%. Since this interval contains zero, this agrees with our hypothesis test conclusion that we cannot conclude there is a significant difference in mean water content between the fields.
+
+# 5.
+
+## a.
+
+Test Used: Two-sample T-test
+
+$$
+H_0:\mu_d \ge \mu_s
+$$
+
+$$
+H_a:\mu_d < \mu_s
+$$
+
+Test statistic: t = -2.6804
+
+Critical Value: -2.554701
+
+Rejection Region: t \< -2.554701
+
+p-value: 0.007679
+
+Decision: Reject H0 due to alpha being greater than p-value and test statistic is in the rejection region.
+
+Conclusion: There is enough evidence to reject the claim that the mean operative time of the dynamic system is lass than with the static.
+
+## b.
+
+(-166.9086, 19.5276)
+
+Since the mean difference includes 0, we cannot conclude that there is a significant difference between the operative times of the systems at the 99% confidence level.

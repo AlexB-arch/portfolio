@@ -1,0 +1,274 @@
+---
+title: "Test 2 R Work"
+author: "Alex Burgos"
+format: pdf
+editor: visual
+---
+
+## 1
+
+a\.
+
+```{r}
+# Given data
+n = 32
+alpha = 0.01
+stdDev = 60
+mu = 500
+sampleMean = 520
+
+z = (sampleMean - mu)/(stdDev / sqrt(n))
+cat("Test statistic: ", z ,"\n")
+
+criticalValue = qnorm(1 - (alpha/2))
+cat("Critical Value: ", criticalValue, "\n")
+
+reject = abs(z) > criticalValue
+reject
+```
+
+b\.
+
+```{r}
+#B
+mu = 500
+muAlt = 525
+stdDev = 60
+alpha = 0.01
+criticalValue = qnorm(1 - (alpha/2))
+
+lowerRange = mu - criticalValue * (stdDev / sqrt(n))
+upperRange = mu + criticalValue * (stdDev / sqrt(n))
+cat("(", lowerRange,",",upperRange, ")")
+
+B = pnorm(upperRange, mean = muAlt, sd = stdDev / sqrt(n)) - 
+  pnorm(lowerRange, mean = muAlt, sd = stdDev / sqrt(n))
+cat("Probability of Type II Error:", B, "\n")
+```
+
+c\.
+
+```{r}
+n = 32
+alpha = 0.01
+stdDev = 60
+mu = 500
+muAlt = 525
+sampleMean = 520
+criticalValue = qnorm(1 - (alpha/2))
+
+lowerRange = mu - criticalValue * (stdDev / sqrt(n))
+upperRange = mu + criticalValue * (stdDev / sqrt(n))
+
+# List of values
+values = c(450, 460, 470, 480, 490, 510, 520, 530, 540, 550)
+
+powers = sapply(values, function(mu) {
+  lowerB = pnorm(lowerRange, mean = mu, sd = stdDev / sqrt(n))
+  upperB = pnorm(upperRange, mean = mu, sd = stdDev / sqrt(n))
+  beta = upperB - lowerB
+  power = 1 - beta
+  return(power)
+})
+
+data.frame(mu = values, Power = powers)
+```
+
+d\.
+
+```{r}
+n = 64
+mu = 500
+muAlt = 525
+sampleMean = 525
+stdDev = 60
+alpha = 0.01
+criticalValue = qnorm(1 - (alpha/2))
+
+lowerRange = mu - criticalValue * (stdDev / sqrt(n))
+upperRange = mu + criticalValue * (stdDev / sqrt(n))
+
+B = pnorm(upperRange, mean = muAlt, sd = stdDev / sqrt(n)) - 
+  pnorm(lowerRange, mean = muAlt, sd = stdDev / sqrt(n))
+cat("Probability of Type II Error:", B, "\n")
+```
+
+e\.
+
+```{r}
+alpha = 0.01
+stdDev = 60
+mu = 500
+newMu = 520
+muAlt = 525
+sampleMean = 520
+criticalValue = qnorm(1 - (alpha/2))
+newB = 0.04
+B = qnorm(1 - newB)
+
+findN = ((criticalValue + B) * stdDev / (newMu - mu))^2
+findN = ceiling(findN)
+cat("Required Sample Size to achieve Beta <= 0.04:", findN, "\n")
+```
+
+## 2
+
+a\.
+
+```{r}
+n = 40
+sampleMean = 47
+mu = 41
+StdDev = 35
+alpha = 0.05
+
+criticalValue = qnorm(1 - (alpha/2))
+criticalValue
+
+errorMargin = criticalValue * (StdDev/sqrt(n))
+errorMargin
+
+lowerErrorMargin = sampleMean - errorMargin
+upperErrorMargin = sampleMean + errorMargin
+
+
+
+cat("95% Confidence Interval: (", lowerErrorMargin, ",", upperErrorMargin, ")\n")
+```
+
+b\.
+
+```{r}
+n = 40
+sampleMean = 47
+mu = 41
+StdDev = 35
+alpha = 0.05
+
+z = (sampleMean - mu) / (StdDev/sqrt(n))
+z
+
+criticalValue = qnorm(1 - (alpha))
+criticalValue
+
+p = 1 - pnorm(z)
+p
+
+reject = z > criticalValue
+reject
+```
+
+## 3
+
+```{r}
+coli = read.csv("/Users/alexb/Downloads/377-coli.txt")
+attach(coli)
+
+t = t.test(coli$housing, 
+           coli$groceries, 
+           alternative = "greater", 
+           paired = T, 
+           conf.level = 0.95)
+t
+
+differences = coli$housing - coli$groceries
+differences
+
+n = 36
+
+sdDiff = sd(differences)
+sdDiff
+
+criticalValue = qt(0.95, 35)
+criticalValue
+
+errorMargin = criticalValue * (sdDiff/sqrt(n))
+errorMargin
+
+lower =  4.277778 - errorMargin
+upper =  4.277778 + errorMargin
+
+lower
+upper
+
+```
+
+# 4
+
+```{r}
+# Given data
+field_A = c(8.1, 8.5, 8.4, 7.3, 8.0, 7.1, 13.9, 12.2, 13.4, 11.3, 12.6, 12.6, 12.7, 12.4, 11.3, 12.5)
+field_B = c(10.2, 10.7, 15.5, 10.4, 9.9, 10.0, 16.6, 15.1, 15.2, 13.8, 14.1, 11.4, 11.5, 11.0)
+
+t_test = t.test(field_A, field_B, alternative = "less", conf.level = 0.95)
+t_test
+
+nA = length(field_A)
+nB = length(field_B)
+
+meanA = mean(field_A)
+meanB = mean(field_B)
+
+sdA = sd(field_A)
+sdB = sd(field_B)
+
+
+pooledSD = sqrt(((nA - 1) * sdA^2 + (nB - 1) * sdB^2) / (nA + nB - 2))
+
+t = (meanA - meanB) / (pooledSD * sqrt(1/nA + 1/nB))
+t
+
+df = nA + nB - 2
+df
+
+alpha = 0.05
+criticalValue = qt(1 - alpha, df)
+criticalValue
+
+p = pt(t, df)
+p
+
+reject = t < criticalValue
+reject
+```
+
+# 5
+
+```{r}
+dynamic <- c(370, 360, 510, 445, 295, 315, 490, 345, 450, 505, 335, 280, 325, 500)
+static <- c(430, 445, 455, 455, 490, 535)
+alpha = 0.01
+df = 17.832
+
+t_test <- t.test(dynamic, 
+                 static, 
+                 alternative = "less",
+                 conf.level = 0.99)
+t_test
+
+n_dynamic <- length(dynamic)
+n_static <- length(static)
+n_dynamic
+n_static
+
+mean_dynamic <- mean(dynamic)
+mean_static <- mean(static)
+mean_dynamic
+mean_static
+
+sd_dynamic <- sd(dynamic)
+sd_static <- sd(static)
+sd_dynamic
+sd_static
+
+criticalValue = qt(alpha, df)
+criticalValue
+
+poolSd = sqrt(((n_dynamic - 1) * sd_dynamic^2 + (n_static - 1) * sd_static^2) / (n_dynamic + n_static - 2))
+poolSd
+
+errorMargin = criticalValue * poolSd * sqrt(1/n_dynamic + 1/n_static)
+
+ci = (mean_dynamic - mean_static) + c(-errorMargin, errorMargin)
+ci
+```
