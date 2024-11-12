@@ -1,4 +1,4 @@
-# Runs in O(n^2) time due to the max() function in the for loop
+# Runs in O(n)
 def max(a, b):
     if a > b:
         return a
