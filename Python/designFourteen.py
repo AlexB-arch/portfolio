@@ -1,30 +1,45 @@
-# Runs in O(n)
-# -Implement, in PHP, python, or C++, the Dynamic programming solution for the Robot Coin-collecting problem that was explained in class. 
-# Make sure that you hardcode in your program the board containing the coins. 
-# Your program should output both the maximum number of coins that the robot can collect and the path that the robot should follow to get this maximum number of coins. 
-def max(a, b):
-    if a > b:
-        return a
-    return b
+# Runs in O(rows * columns)
+def coinCollecting():
+    board = [
+        [0, 3, 1, 1],
+        [2, 0, 0, 4],
+        [1, 5, 3, 1],
+        [2, 2, 2, 0]
+    ]
 
-def coin_row(coins):
-    n = len(coins)
+    rows, columns = len(board), len(board[0])
+    maxCoins = [[0 for _ in range(columns)] for _ in range(rows)]
+    path = [[[] for _ in range(columns)] for _ in range(rows)]
 
-    if n == 1:
-        return coins[0]
-    
-    if n == 2:
-        return max(coins[0], coins[1])
+    maxCoins[0][0] = board[0][0]
+    path[0][0] = [(0, 0)]
 
-    pickCoins = [0] * (n + 1)
-    pickCoins[0] = 0
-    pickCoins[1] = coins[0]
+    # Initialize row 0
+    for column in range(1, columns):
+        maxCoins[0][column] = maxCoins[0][column-1] + board[0][column]
+        path[0][column] = path[0][column-1] + [(0, column)]
 
-    for i in range(2, n + 1):
-        pickCoins[i] = max(coins[i - 1] + pickCoins[i - 2], pickCoins[i - 1])
+    # Initialize column 0
+    for row in range(1, rows):
+        maxCoins[row][0] = maxCoins[row-1][0] + board[row][0]
+        path[row][0] = path[row-1][0] + [(row, 0)]
 
-    return pickCoins[n]
+    for row in range(1, rows):
+        for column in range(1, columns):
+            if maxCoins[row-1][column] > maxCoins[row][column-1]:
+                maxCoins[row][column] = maxCoins[row-1][column] + board[row][column]
+                path[row][column] = path[row-1][column] + [(row, column)]
+            else:
+                maxCoins[row][column] = maxCoins[row][column-1] + board[row][column]
+                path[row][column] = path[row][column-1] + [(row, column)]
 
-# Test cases
-print(coin_row([5, 1, 2, 10, 6, 2])) # 17
-print(coin_row([1, 2, 3, 4, 5, 6])) # 12
+    coins = maxCoins[rows-1][columns-1]
+    wholePath = path[rows-1][columns-1]
+
+    print(f"Maximum amount in coins collected: {coins}")
+    print("Path:")
+    for step in wholePath:
+        print(step)
+
+# Test
+coinCollecting()
