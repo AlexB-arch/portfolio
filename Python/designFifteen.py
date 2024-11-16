@@ -1,3 +1,4 @@
+# Runs in O(mn) or O(coins * amount)
 def makeChange(amount):
     coinDenominations = [25, 10, 5, 1]
     minCoinsRequired = [float('inf')] * (amount + 1)
@@ -25,7 +26,7 @@ def makeChange(amount):
     return minCoinsRequired[amount], coinsUsed
 
 # Test
-amount = 30
+amount = 87
 minimumCoins, coins = makeChange(amount)
 if coins:
     print(f"Minimum number of coins: {minimumCoins}")
