@@ -1,0 +1,21 @@
+# Runs in O(n*v)
+#
+# Geometric Confections(A):
+#   Input: A sorted list A[1..n] of integers
+#   Output: The largest value V that cannot be expressed as a sum of values from A
+#
+#   Initialize a set to track reachable sums
+#   reachable = Set() 
+#   V = max(A) * 2
+#   result = 0
+#
+#   Use dynamic programming to mark reachable sums
+#   for x = 1 to V:
+#       for num in A:
+#           if x - num in reachable or x == num:
+#               reachable.add(x)
+#               break
+#       else:
+#           result = x
+#
+#   return result
