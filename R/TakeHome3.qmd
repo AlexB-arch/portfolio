@@ -1,0 +1,141 @@
+---
+title: "Take-Home Test 3"
+author: "Alex Burgos"
+format: pdf
+editor: visual
+---
+
+## 1.
+
+**a.** 95% Confidence Interval for the control group is (17.9991, 27.4643)
+
+**b.** 95% Confidence interval for the experimental group is (12.2281, 21.7861)
+
+Test used: F-test for equality of variance
+
+H0: $\sigma^2$control $\le$ $\sigma^2$experimental
+
+Ha: $\sigma^2$control $>$ $\sigma^2$experimental
+
+Test statistic: F = 1.9275
+
+Critical Value: 1.8770
+
+Rejection region: F \> 1.8770
+
+p-value = 0.0436
+
+Decision: Reject the null hypothesis because F is in the rejection region and p is less than alpha.
+
+Conclusion: There is sufficient evidence to conclude that the variability in final exam scores is higher in the control group compared to the experimental group.
+
+## 2.
+
+**a.** 99% Confidence Interval is (−0.0035, −0.0002)
+
+**b.** Test used: two proportions Z-test
+
+H0: cancer chances with vasectomy ​$\le$ cancer chances with no vasectomy​
+
+Ha: cancer chances with vasectomy​ $>$ cancer chances with no vasectomy​
+
+Test Statistic: z = 2.9548
+
+Critical Value: z = 2.33
+
+Rejection region: z \> 2.33
+
+p-value: 0.0016
+
+Decision: Reject the null hypothesis because z is higher than the critical value and p is less than alpha.
+
+Conclusion: The data supports the claim that men who have had a vasectomy are at greater risk of prostate cancer.
+
+## 3.
+
+**a.** Mean and standard deviation for the time (in hours) for each laptop brand.
+
+| Brand | Mean (hours) | Std Dev (hours) |
+|-------|--------------|-----------------|
+| A     | 7.675        | 1.4291          |
+| B     | 10.425       | 2.1986          |
+| C     | 8.7917       | 2.3521          |
+| D     | 5.900        | 1.1499          |
+
+**b.** Test Used: One-way ANOVA
+
+H0: $\mu_A = \mu_B = \mu_C = \mu_D$
+
+Ha: At least one different mean
+
+Test Statistic: F = 10.29
+
+Critical Value: 2.851741
+
+Rejection Region: F \> 2.851741
+
+p-value: 4.3e-05
+
+Decision: Reject the null hypothesis because F is in the rejection region.
+
+Conclusion: There is evidence that the mean battery charge is different among the brands.
+
+## 4.
+
+Test Used: Chi-squared Test for Independence
+
+H0: Acreage and tenure are independent.
+
+Ha: Acreage and tenure are associated.
+
+Test Statistic: $X^2$ = 451.97
+
+Critical Value: 15.5073
+
+Rejection region: $X^2$ \> 15.5073
+
+p-value: 2.2e-16
+
+Decision: Reject the null hypothesis because $X^2$ is in the rejection region and p is less than alpha
+
+Conclusion: There is enough evidence to conclude that there is an association between the farm's acreage and the operator's tenure
+
+## 5.
+
+**a.** Test used: Chi-square goodness-of-fit.
+
+H0: teams are evenly matched
+
+Ha: teams are not evenly matched
+
+Test Statistic: $X^2$ = 5.6966
+
+Critical Values: 7.8147.
+
+Rejection region: $X^2$ \> 7.8147.
+
+p-value: 0.1273
+
+Decision: Fail to reject the null hypothesis at 5% level of significance because $X^2$ is below the rejection region.
+
+Conclusion: There isn't enough evidence that the World Series teams are not evenly matched.
+
+**b.** Test used: Chi-square goodness-of-fit.
+
+H0: teams are evenly matched
+
+Ha: teams are not evenly matched
+
+Test Statistic: $X^2$ = 5.6966
+
+Critical Values: 6.2514
+
+Rejection region: $X^2$ \> 6.2514
+
+p-value: 0.1273
+
+Decision: Fail to reject the null hypothesis at the 10% level of significance because $X^2$ is below the rejection region.
+
+Conclusion: There isn't enough evidence that the World Series teams are not evenly matched.
+
+**c.** The test is appropriate because the observations are independent and all expected frequencies are greater than 5.

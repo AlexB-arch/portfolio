@@ -1,0 +1,171 @@
+---
+title: "Take-Home Test 3 R Work"
+author: "Alex Burgos"
+format: pdf
+editor: visual
+---
+
+## 1.
+
+```{r}
+algebra = read.delim("algebra.txt", header = T, sep = ",")
+attach(algebra)
+```
+
+### a.
+
+```{r}
+control = algebra$control
+n = length(control)
+a = 0.05
+
+stdDev = sd(control)
+
+lowerChi = qchisq(a / 2, df = n - 1)
+upperChi = qchisq(1 - (a / 2), df = n - 1)
+
+lowerBound = sqrt((n - 1) * (stdDev^2 / upperChi))
+upperBound = sqrt((n - 1) * (stdDev^2 / lowerChi))
+
+cat("95% Confidence Interval for the control group: (", 
+    round(lowerBound, 4), ", ",
+    round(upperBound, 4), ")\n")
+```
+
+### b.
+
+```{r}
+exp = na.omit(algebra$experimental)
+n = length(exp)
+a = 0.05
+
+stdDev = sd(exp)
+
+lowerChi = qchisq(a / 2, df = n - 1)
+upperChi = qchisq(1 - (a / 2), df = n - 1)
+
+lowerBound = sqrt((n - 1) * (stdDev^2 / upperChi))
+upperBound = sqrt((n - 1) * (stdDev^2 / lowerChi))
+
+cat("95% Confidence Interval for the experimental group: (",
+    round(lowerBound, 4), ", ",
+    round(upperBound, 4), ")\n")
+```
+
+### c.
+
+```{r}
+F = var.test(control, exp, alternative = "greater")
+cat("F-statistic:", round(F$statistic, 4), "\n")
+cat("Degrees of freedom:", F$parameter[1], "and", F$parameter[2], "\n")
+cat("p-value:", round(F$p.value, 4), "\n")
+```
+
+## 2.
+
+### a.
+
+```{r}
+# Given data
+x1 = 69
+n1 = 21000
+x2 = 113
+n2 = 22000
+
+proportion1 <- x1 / n1
+proportion2 <- x2 / n2
+
+stdError <- sqrt((proportion1 * (1 - proportion1)) / n1 + (proportion2 * (1 - proportion2)) / n2)
+
+z <- qnorm(1 - 0.01 / 2)
+
+lowerBound <- (proportion1 - proportion2) - z * stdError
+upperBound <- (proportion1 - proportion2) + z * stdError
+
+cat("99% Confidence Interval for the difference in proportions: (",
+    round(lowerBound, 4), ", ", 
+    round(upperBound, 4), ")\n")
+
+#b
+propsCombined = (x1 + x2) / (n1 + n2)
+
+nullStdError = sqrt(propsCombined * (1 - propsCombined) * (1 / n1 + 1 / n2))
+
+z = (proportion2 - proportion1) / nullStdError
+
+p = 1 - pnorm(z)
+
+cat("Test Statistic (z):", round(z, 4), "\n")
+cat("p-value:", round(p, 4), "\n")
+```
+
+## 3.
+
+```{r}
+batteries = read.delim("battery.txt", header = T, sep = ",")
+
+Brand = batteries$Brand
+Hours = batteries$Hours
+
+# a
+brandMean = tapply(Hours, Brand, mean)
+brandStdDev = tapply(Hours, Brand, sd)
+brandN = tapply(Hours, Brand, length)
+
+brandMean
+brandStdDev
+brandN
+
+# b
+criticalValue = qf(0.95, 3, 38)
+criticalValue
+
+anova = aov(Hours ~ Brand, data = batteries)
+summary(anova)
+
+```
+
+## 4.
+
+```{r}
+data <- matrix(c(739, 70, 44, 853,
+                 492, 130, 38, 660,
+                 198, 143, 27, 368,
+                 51,  84, 14, 149,
+                 41, 114, 17, 172),
+                nrow = 5, byrow = TRUE)
+
+rownames(data) = c("Under 50", "50–179", "180–499", "500–999", "1000 and over")
+colnames(data) = c("Full Owner", "Part Owner", "Tenant", "Total")
+
+data = data[, -4]
+
+chiSqr = chisq.test(data)
+
+cat("Chi-Square Test Results:\n")
+print(chiSqr)
+
+criticalValue = qchisq(0.95, 8)
+round(criticalValue, 4)
+```
+
+## 5.
+
+```{r}
+observed = c(21, 28, 27, 40)
+totalSeries = sum(observed)
+
+probabilities = c(0.125, 0.25, 0.3125, 0.3125)
+
+expected = probabilities * totalSeries
+
+chiSqr = chisq.test(observed, p = probabilities, rescale.p = TRUE)
+print(chiSqr)
+
+criticalValue5 = qchisq(0.95, 3)
+round(criticalValue5, 4)
+
+criticalValue10 = qchisq(0.90, 3)
+round(criticalValue10, 4)
+
+```
