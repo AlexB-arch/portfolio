@@ -1,0 +1,57 @@
+---
+title: "Homework 18"
+format: pdf
+editor: visual
+---
+
+1.  Scatter plot from 11.3
+
+    ```{r}
+    data = read.delim("ex11-3.txt", sep = ",", header = TRUE)
+    xValues = data$X.x.
+    yValues = data$X.y.
+
+    plot(xValues, yValues, 
+         main = "Scatter Plot with Least Squares Regression Line", 
+         xlab = "X Values",
+         ylab = "Y Values",
+         pch = 19, col = "blue")
+
+    model = lm(yValues ~ xValues)
+
+    abline(model, col = "red", lwd = 2)
+
+    summary(model)
+
+
+    ```
+
+2.  Exercise 11.22
+
+    ```{r}
+    values = read.delim("ex11-22.txt", sep = ",", header = TRUE)
+    treadmillTime = values$X.Treadmill.
+    raceTime  = values$X.10.K.
+
+    # a
+    plot(treadmillTime, raceTime, 
+         main = "Scatter Plot of Treadmill Time vs Race Time", 
+         xlab = "Treadmill Time (minutes)", 
+         ylab = "Race Time (minutes)", 
+         pch = 19, col = "blue")
+
+    # b
+    model = lm(raceTime ~ treadmillTime)
+    abline(model, col = "red", lwd = 2)
+
+    # c
+    summary(model)
+
+    b0 = coef(model)[1]  # Intercept
+    b1 = coef(model)[2]  # Slope
+
+    ```
+
+    b\. Multiple R-squared shows that it's a good model.
+
+    c\. The estimated regression model is: ŷ = 58.8158  + -1.8673x

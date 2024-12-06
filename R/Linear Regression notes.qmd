@@ -1,0 +1,47 @@
+---
+title: "Linear Regression"
+format: pdf
+editor: visual
+---
+
+## Linear Regression
+
+```{r}
+#predict(fit, new, interval="prediction")
+```
+
+How good is the regression equation at predicting?
+
+Linear Regression Model
+
+$$ 
+y = \beta_0 + \beta_1 x
+$$
+
+Constant Model
+
+$$
+y(x)=y
+$$
+
+ANOVA comes into play at some point.
+
+Proportionate Reduction in Error:
+
+$$
+SS(Total) - SS(Error)/ SS Total
+$$
+
+The PRE is closely related to the correlation coefficient.
+
+Be able to use the linear regression summary
+
+$r^2=R^2$ = coefficient of determination.
+
+Beware of negative slopes.
+
+Final:
+
+-   interpret R output. No R commands.
+
+-   Critical values may be given as multiple choice based on the tail of the test.
