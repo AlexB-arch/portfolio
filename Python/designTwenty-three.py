@@ -1,3 +1,4 @@
+# Runs in O(n log n)
 def maximizeRequests(requests):
     # Sort requests based on end time
     sortedRequests = sorted(requests, key=lambda x: x[1])

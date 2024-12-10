@@ -11,8 +11,6 @@ def minAnnouncements(intervals):
             announcements.append(lastAnnouncement)
     
     return announcements
-    
-    return announcements
 
 # Test case (sorted by end time)
 classIntervals = [

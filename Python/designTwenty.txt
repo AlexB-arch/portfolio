@@ -1,0 +1,14 @@
+Runs in O(n) assuming the intervals are given sorted by end time
+
+minAnnouncements(intervals)
+    announcements = empty list
+    lastAnnouncement = null
+    
+    For each interval in intervals:
+        start = interval.start
+        end = interval.end
+        If lastAnnouncement is null or start > lastAnnouncement then
+            lastAnnouncement = end
+            announcements.add(lastAnnouncement)
+    
+    return announcements
