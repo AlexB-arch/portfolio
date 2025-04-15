@@ -5,7 +5,6 @@ import sys
 print(sys.platform) # prints the platform you are using
 print(os.getcwd()) # get current working directory
 print(Path.cwd()) # current working directory
-#os.chdir(r'/') # change directory
 print(Path.home()) # home directory
 
 # Absolute path always starts at the root folder
